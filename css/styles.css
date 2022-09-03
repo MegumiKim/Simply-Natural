@@ -11,6 +11,23 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+img {
+  width: 100%;
+}
+
+main {
+  padding: 8%;
+}
+
+.cta {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  color: var(--color_black);
+  background-color: #d99c9c;
+  padding: 10px 20px;
+  margin: 5% auto;
+}
 /* header */
 .logo {
   font-family: "Oooh Baby", cursive, serif;
@@ -125,3 +142,5 @@ nav a {
 .carousel-dot_selected {
   background-color: aquamarine;
 }
+
+/* about */
