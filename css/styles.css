@@ -1,5 +1,5 @@
 @import "/css/variables.css";
-
+@import "/css/ui.css";
 /* global */
 body {
   background-color: var(--color_background);
@@ -19,6 +19,9 @@ main {
   padding: 8%;
 }
 
+p {
+  line-height: 150%;
+}
 .cta {
   display: block;
   width: fit-content;
@@ -27,6 +30,10 @@ main {
   background-color: #d99c9c;
   padding: 10px 20px;
   margin: 5% auto;
+}
+
+li {
+  line-height: 200%;
 }
 /* header */
 .logo {
