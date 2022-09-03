@@ -8,6 +8,10 @@
   color: var(--color_header);
   display: inline-block;
 } */
+/* 
+.form {
+  position: relative;
+} */
 
 #current,
 .current-page {
@@ -43,17 +47,6 @@
 .neutral {
   border: var(--black) solid 2px;
   background: white;
-}
-
-.user-feedback {
-  position: absolute;
-  left: 50%;
-  margin-left: -150px;
-  margin-top: -100px;
-  width: 250px;
-
-  top: 100px;
-  z-index: 100;
 }
 
 /* loader */

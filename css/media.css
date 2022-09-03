@@ -1,0 +1,29 @@
+@media (min-width: 600px) {
+  body {
+    font-size: 21px;
+  }
+  main {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .nav-wrap {
+    display: block;
+    min-width: 300px;
+    order: -1;
+  }
+  nav {
+    width: 400px;
+    height: fit-content;
+    padding: 0;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--color_background);
+  }
+
+  #hamburger-icon {
+    display: none;
+  }
+}
