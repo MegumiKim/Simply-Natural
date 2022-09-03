@@ -1,0 +1,127 @@
+@import "/css/variables.css";
+
+/* global */
+body {
+  background-color: var(--color_background);
+  font-size: 16px;
+  font-family: "Arsenal", Cambria, Cochin, Georgia, serif;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* header */
+.logo {
+  font-family: "Oooh Baby", cursive, serif;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+#search,
+#hamburger-menu,
+nav {
+  display: none;
+  z-index: 10;
+  background-color: var(--color_beige);
+  padding: 20px;
+  padding-bottom: 5px;
+}
+
+.nav-search-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 25px;
+}
+
+nav a {
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: var(--color_grey);
+}
+
+#hamburger-icon {
+  margin-left: 10px;
+}
+
+.current {
+  text-decoration: underline;
+}
+
+/* carousel */
+.carousel {
+  height: fit-content;
+  position: relative;
+}
+
+.carousel-item {
+  display: none;
+  height: 300px;
+  background-color: grey;
+  padding: 1em;
+
+  font-weight: bold;
+  color: #fff;
+}
+
+.carousel-nav {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  text-align: center;
+}
+
+.carousel-item_selected {
+  display: block;
+}
+
+.arrow {
+  bottom: 50%;
+  user-select: none;
+  position: absolute;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.forward {
+  right: 0;
+}
+
+.arrow:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-block-end: 5px;
+}
+
+.carousel-dot_selected {
+  background-color: aquamarine;
+}
