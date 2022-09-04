@@ -1,16 +1,25 @@
 import { createElement } from "./createElement.js";
 
-export function createThumbnail(post) {
+export async function createThumbnail(post) {
   const title = createElement("h3", "thumbnail_title", post.title.rendered);
-  const formatedDate = post.date;
-  const date = createElement("p", "thumbnail_date", formatedDate);
+  const formattedDate = post.date;
+  const date = createElement("p", "thumbnail_date", formattedDate);
+  const img = await fetchImg(post);
+  const category = await fetchCategory(post);
+  const wrapper = createElement("div", "thumbnail-text-wrapper", undefined, [
+    title,
+    date,
+    category,
+  ]);
 
-  const element = createElement("a", "thumbnail", undefined, [title, date]);
+  const element = createElement("a", "thumbnail", undefined);
+  element.append(img);
+  element.append(wrapper);
   element.href = "/html/post.html";
   return element;
 }
 
-export async function fetchImg(post) {
+async function fetchImg(post) {
   const id = post.featured_media;
   const url = "http://localhost:10003/wp-json/wp/v2/media/" + id;
 
@@ -28,7 +37,7 @@ export async function fetchImg(post) {
   }
 }
 
-export async function fetchCategory(post) {
+async function fetchCategory(post) {
   const id = post.categories[0];
   const url = "http://localhost:10003/wp-json/wp/v2/categories/" + id;
 
