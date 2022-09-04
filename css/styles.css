@@ -5,19 +5,25 @@
 body {
   background-color: var(--color_background);
   font-size: 16px;
-  font-family: "Arsenal", Cambria, Cochin, Georgia, serif;
+  font-family: "arsenal", Cambria, Cochin, Georgia, serif;
   margin: 0 auto;
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+}
 img {
   width: 100%;
 }
 
 main {
-  padding: 20px 8%;
+  padding: 0 8%;
 }
 
 p {
@@ -48,6 +54,10 @@ li {
   color: black;
 }
 
+header {
+  margin: 20px;
+  margin-bottom: 10px;
+}
 header,
 footer {
   display: flex;
@@ -56,7 +66,6 @@ footer {
   padding: 25px;
 }
 
-#search,
 #hamburger-menu,
 nav {
   display: none;
@@ -64,6 +73,10 @@ nav {
   background-color: var(--color_beige);
 }
 
+.search_icon {
+  text-decoration: none;
+  color: var(--color_black);
+}
 nav {
   padding: 20px 20px;
   height: 100px;

@@ -1,0 +1,25 @@
+.thumbnail {
+  max-width: 600px;
+  display: flex;
+  margin: 20px;
+  height: 100px;
+  padding: 20px;
+  border: 1px solid var(--color_beige);
+  text-decoration: none;
+  color: var(--color_black);
+}
+
+.thumbnail:hover {
+  background-color: var(--color_beige);
+}
+.thumbnail_img {
+  width: auto;
+}
+.list-of-post_container {
+  padding: 5%;
+}
+
+.thumbnail_category,
+.thumbnail_date {
+  font-size: 16px;
+}

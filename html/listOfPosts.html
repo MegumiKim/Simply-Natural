@@ -11,11 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Arsenal&family=Oooh+Baby&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Arsenal&family=Cormorant+Garamond:wght@300;400&family=Oooh+Baby&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/listOfPosts.css" />
     <link rel="stylesheet" href="../css/media.css" />
     <script
       src="https://kit.fontawesome.com/175ecb4e25.js"
@@ -27,10 +28,7 @@
     <header>
       <a class="logo" href="index.html">Simply Natural</a>
       <div class="nav-search-wrap">
-        <div class="search-wrap">
-          <input type="text" id="search" />
-          <label for="search" id="search_icon" class="fas fa-search"> </label>
-        </div>
+        <a href="search.html" class="search_icon fas fa-search"></a>
         <div class="nav-wrap">
           <input type="checkbox" id="hamburger-menu" />
           <label for="hamburger-menu" id="hamburger-icon"
@@ -38,14 +36,14 @@
           ></label>
           <nav>
             <a href="index.html">Home</a>
-            <a href="blog.html" class="current">Blog</a>
+            <a href="listOfPosts.html" class="current">Blog</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </nav>
         </div>
       </div>
     </header>
-    <div class="bloglist-container"></div>
+    <div class="list-of-post_container"></div>
     <footer>
       <div class="logo">simply natural</div>
       <div class="social-media">
@@ -54,6 +52,6 @@
         <i class="fa-brands fa-pinterest-p"></i>
       </div>
     </footer>
-    <script src="../js/blog-post.js" type="module"></script>
+    <script src="../js/listOfPosts.js" type="module"></script>
   </body>
 </html>
