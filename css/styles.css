@@ -1,5 +1,6 @@
 @import "variables.css";
 @import "ui.css";
+/* @import "listOfPosts.css"; */
 
 /* global */
 body {
@@ -24,6 +25,7 @@ img {
 
 main {
   padding: 0 8%;
+  margin: 0 auto;
 }
 
 p {
@@ -122,17 +124,36 @@ nav a {
   height: fit-content;
   position: relative;
 }
-
-.carousel-item {
-  display: none;
-  height: 300px;
-  background-color: grey;
-  padding: 1em;
-
-  font-weight: bold;
-  color: #fff;
+.carousel_container {
+  height: fit-content;
+  position: relative;
 }
 
+.carousel_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color_grey);
+  background-color: var(--color_beige);
+  margin: 0 40px;
+}
+
+.carousel-text-wrapper {
+  padding: 20px;
+
+  /* top: 50%;
+  display: flex;
+  position: absolute;
+  max-width: 300px;
+  right: 20px; */
+}
+
+.carousel-text-wrapper p {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
 .carousel-nav {
   width: 100%;
   padding: 20px 0;
@@ -142,16 +163,18 @@ nav a {
   text-align: center;
 }
 
-.carousel-item_selected {
+/* .carousel-item_selected {
   display: block;
-}
+} */
 
 .arrow {
-  bottom: 50%;
-  user-select: none;
+  bottom: 40%;
+  /* user-select: none; */
   position: absolute;
   cursor: pointer;
-  padding: 20px;
+  padding: 20px 10px;
+  background-color: var(--color_background);
+  border: none;
 }
 
 .forward {
@@ -164,7 +187,6 @@ nav a {
 }
 
 .dot {
-  cursor: pointer;
   height: 10px;
   width: 10px;
   background-color: #fff;
@@ -178,3 +200,25 @@ nav a {
 }
 
 /* about */
+.read-button {
+  background-color: #d99c9c;
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: 18px;
+  color: var(--color_black);
+  display: block;
+  max-width: fit-content;
+  cursor: pointer;
+}
+
+.carousel_title {
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+.category {
+  font-style: italic;
+}
+
+.read-button {
+}
