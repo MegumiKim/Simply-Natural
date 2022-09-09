@@ -1,3 +1,5 @@
+import { createElement } from "./createElement.js";
+
 export async function fetchImg(post) {
   const id = post.featured_media;
   const url = "http://localhost:10003/wp-json/wp/v2/media/" + id;
@@ -6,9 +8,11 @@ export async function fetchImg(post) {
     const response = await fetch(url);
     const json = await response.json();
 
-    const element = document.createElement("img");
-    element.src = json.guid.rendered;
-    element.classList.add("thumbnail_img");
+    const img = document.createElement("img");
+    img.src = json.guid.rendered;
+
+    const element = createElement("div", "img-wrapper", undefined, [img]);
+    // element.classList.add("thumbnail_img");
 
     return element;
   } catch (e) {

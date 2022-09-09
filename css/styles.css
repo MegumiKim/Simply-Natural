@@ -28,9 +28,6 @@ main {
   margin: 0 auto;
 }
 
-p {
-  line-height: 150%;
-}
 /* h1,
 h2 {
   font-family: "Libre Caslon Display";
@@ -43,6 +40,10 @@ h2 {
   background-color: #d99c9c;
   padding: 10px 20px;
   margin: 5% auto;
+}
+
+.cta:hover {
+  background-color: #a77272;
 }
 
 li {
@@ -121,31 +122,23 @@ nav a {
 
 /* carousel */
 .carousel {
-  height: fit-content;
   position: relative;
-}
-.carousel_container {
-  height: fit-content;
-  position: relative;
+  /* background-color: var(--color_background); */
+  background-color: #f6ebe2;
+  padding-top: 30px;
 }
 
 .carousel_item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: var(--color_grey);
-  background-color: var(--color_beige);
   margin: 0 40px;
 }
 
+.img-wrapper {
+  flex: 2;
+}
 .carousel-text-wrapper {
-  padding: 20px;
-
-  /* top: 50%;
-  display: flex;
-  position: absolute;
-  max-width: 300px;
-  right: 20px; */
+  flex: 1;
+  position: relative;
 }
 
 .carousel-text-wrapper p {
@@ -156,9 +149,8 @@ a {
 }
 .carousel-nav {
   width: 100%;
-  padding: 20px 0;
-  position: absolute;
-  bottom: 0px;
+  /* background-color: #f6ebe2; */
+  margin: 5px auto;
   left: 0;
   text-align: center;
 }
@@ -168,13 +160,14 @@ a {
 } */
 
 .arrow {
-  bottom: 40%;
-  /* user-select: none; */
+  bottom: 65%;
+  color: var(--color_grey);
   position: absolute;
   cursor: pointer;
   padding: 20px 10px;
-  background-color: var(--color_background);
+  background-color: #f6ebe2;
   border: none;
+  font-size: 1em;
 }
 
 .forward {
@@ -183,32 +176,45 @@ a {
 
 .arrow:hover {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-color: var(--color_grey);
 }
 
 .dot {
   height: 10px;
   width: 10px;
-  background-color: #fff;
+  background-color: var(--color_beige);
   border-radius: 50%;
   display: inline-block;
   margin-block-end: 5px;
+  bottom: 20px;
 }
 
 .carousel-dot_selected {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+  background-color: var(--color_grey);
 }
 
 /* about */
+
+.about-frame,
+.about-img {
+  max-width: 600px;
+  margin: auto;
+}
+
 .read-button {
   background-color: #d99c9c;
   text-decoration: none;
-  padding: 5px 15px;
+  padding: 10px 30px;
   font-size: 18px;
   color: var(--color_black);
-  display: block;
+  display: inline-block;
   max-width: fit-content;
   cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 80px;
 }
 
 .carousel_title {
@@ -218,7 +224,5 @@ a {
 
 .category {
   font-style: italic;
-}
-
-.read-button {
+  /* display: inline-block; */
 }

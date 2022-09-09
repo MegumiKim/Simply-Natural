@@ -1,3 +1,5 @@
+// import { forward } from "../carousel_1.js";
+
 import { createElement } from "./createElement.js";
 import { fetchCategory } from "./fetchCategory.js";
 import { fetchImg } from "./fetchImg.js";
@@ -20,14 +22,16 @@ export async function createCarouselItem(post) {
     button,
   ]);
 
-  const rightArrow = createElement("button", "arrow", "&#10095;");
-  rightArrow.classList.add("forward");
-  const leftArrow = createElement("button", "arrow", "&#10094;");
-  leftArrow.classList.add("back");
+  // const rightArrow = createElement("button", "arrow", "&#10095;");
+  // rightArrow.classList.add("forward");
+
+  // const leftArrow = createElement("button", "arrow", "&#10094;");
+  // leftArrow.classList.add("back");
   const element = await createElement("div", "carousel_item", undefined);
 
   element.append(img);
   element.append(wrapper);
-
+  // element.append(rightArrow);
+  // element.append(leftArrow);
   return element;
 }

@@ -1,16 +1,19 @@
-import { fetchPosts } from "./form/API/fetchPosts.js";
 import { createThumbnail } from "./createHTMLelements/createThumbnail.js";
+import { renderThumbnails } from "./createHTMLelements/renderThumbnail.js";
 const container = document.querySelector(".list-of-post_container");
 
-// fetchPosts(10, container);
+const url = "http://localhost:10003/wp-json/wp/v2/posts";
 
-async function showThumbnails() {
-  const fetchedPost = await fetchPosts(4);
+renderThumbnails(url, container);
 
-  fetchedPost.forEach(async function (post) {
-    const thumbnail = await createThumbnail(post);
-    container.append(thumbnail);
-  });
-}
+const categorySelector = document.querySelector("#category-selector");
 
-showThumbnails();
+categorySelector.onchange = async function (event) {
+  const selectedCategory = event.target.value;
+  if (selectedCategory) {
+    const newUrl = url + "?categories=" + selectedCategory;
+    renderThumbnails(newUrl, container);
+  } else {
+    renderThumbnails(url, container);
+  }
+};

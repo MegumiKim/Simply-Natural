@@ -1,4 +1,24 @@
-@media (min-width: 600px) {
+@media (min-width: 900px) {
+  .carousel_item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .carousel-text-wrapper {
+    padding-left: 40px;
+  }
+  .carousel-nav {
+    bottom: 0px;
+  }
+  .arrow {
+    bottom: 40%;
+  }
+  .read-button {
+    position: static;
+  }
+}
+
+@media (min-width: 700px) {
   body {
     font-size: 21px;
   }
@@ -27,7 +47,8 @@
     display: none;
   }
 
-  .carousel_item {
+  .thumbnail {
     flex-direction: row;
+    height: 100px;
   }
 }
