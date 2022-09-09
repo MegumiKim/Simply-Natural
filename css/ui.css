@@ -36,7 +36,7 @@
 .error {
   color: darkred;
   border: darkred 2px solid;
-  background: rgb(249, 217, 217);
+  background: rgb(248, 231, 231);
 }
 .success {
   color: darkgreen;

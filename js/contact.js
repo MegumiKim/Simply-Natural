@@ -16,3 +16,14 @@ contactForm.onsubmit = function (event) {
     );
   }
 };
+
+async function fetchContactForm() {
+  const url = "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms";
+
+  const response = await fetch(url);
+  const json = await response.json();
+
+  console.log(json);
+}
+
+fetchContactForm();

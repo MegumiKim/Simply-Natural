@@ -1,3 +1,5 @@
+import { userAlert } from "../userAlert.js";
+
 export async function fetchCategory(post) {
   const id = post.categories[0];
   const url = "http://localhost:10003/wp-json/wp/v2/categories/" + id;
@@ -12,6 +14,6 @@ export async function fetchCategory(post) {
 
     return element;
   } catch (e) {
-    console.log(e);
+    return userAlert();
   }
 }
