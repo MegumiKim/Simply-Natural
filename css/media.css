@@ -19,11 +19,23 @@
   body {
     font-size: 21px;
   }
+
   main {
     max-width: 800px;
     margin: 0 auto;
   }
 
+  .main-full {
+    max-width: none;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .carousel_title {
+    font-size: 3rem;
+  }
   .nav-wrap {
     display: block;
     min-width: 300px;
@@ -48,5 +60,10 @@
     flex-direction: row;
     height: 120px;
     margin: 20px auto;
+  }
+}
+@media (min-width: 1000px) {
+  .carousel_title {
+    font-size: 5rem;
   }
 }

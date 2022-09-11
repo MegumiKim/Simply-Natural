@@ -15,10 +15,17 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+.carousel_title {
   font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
+  font-weight: 400;
 }
+
+h1,
+.carousel_title {
+  font-size: 2em;
+}
+
 img {
   width: 100%;
 }
@@ -28,6 +35,9 @@ main {
   margin: 0 auto;
 }
 
+.main-full {
+  padding: 0;
+}
 /* h1,
 h2 {
   font-family: "Libre Caslon Display";
@@ -128,18 +138,16 @@ nav a {
   position: relative;
   /* background-color: var(--color_background); */
   background-color: #f6ebe2;
-  padding-top: 30px;
-  cursor: pointer;
 }
 
 .carousel_item {
   color: var(--color_grey);
-  margin: 0 40px;
+  /* margin: 0 40px; */
 }
 
-.carousel:hover {
+/* .carousel:hover {
   background-color: rgba(0, 0, 0, 0.2);
-}
+} */
 .img-wrapper {
   flex: 2;
 }
@@ -213,7 +221,7 @@ a {
   margin: auto;
 }
 
-.read-button {
+/* .read-button {
   background-color: #d99c9c;
   text-decoration: none;
   padding: 10px 30px;
@@ -225,13 +233,16 @@ a {
   position: absolute;
   right: 10px;
   top: 80px;
-}
+} */
 
 .carousel_title {
   margin-bottom: 0;
-  font-size: 1.5em;
+  cursor: pointer;
 }
 
+.carousel_title:hover {
+  text-decoration: underline;
+}
 .category {
   font-style: italic;
 }

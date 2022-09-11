@@ -19,7 +19,7 @@ contactForm.onsubmit = function (event) {
 
 async function fetchContactForm() {
   const url =
-    "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1";
+    "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback/schema";
 
   const response = await fetch(url);
   const json = await response.json();
