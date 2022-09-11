@@ -14,7 +14,7 @@ async function fetchCategories() {
     json.forEach((category) => {
       const name = createElement("a", "category-name", category.name);
       const id = category.id;
-      name.href = "listOfPosts.html?category=" + id;
+      name.href = "/html/listOfPosts.html?category=" + id;
 
       categoriesContainer.append(name);
     });
