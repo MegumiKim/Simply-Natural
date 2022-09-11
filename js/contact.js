@@ -17,19 +17,20 @@ contactForm.onsubmit = function (event) {
   }
 };
 
-// async function fetchContactForm() {
-//   const url = "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms";
+async function fetchContactForm() {
+  const url =
+    "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1";
 
-//   const response = await fetch(url);
-//   const json = await response.json();
+  const response = await fetch(url);
+  const json = await response.json();
 
-//   console.log(json);
-// }
+  console.log(json);
+}
 
-// fetchContactForm();
+fetchContactForm();
 
 const url =
-  "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback";
+  "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
 
 // const formSubmissionHandle = (event) =>{
 //   event.preventDefault();
@@ -39,30 +40,30 @@ const url =
 //     )
 // }
 
-const inputName = document.querySelector("#name").value;
+// const inputName = document.querySelector("#name").value;
 
-const form = document.querySelector("#test-form");
+// const form = document.querySelector("#test-form");
 
-const response = await fetch(
-  "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback",
-  {
-    method: "POST",
-    headers: {
-      // Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: `{
-   "Id": 78912,
-   "Customer": "Jason Sweet",
-   "Quantity": 1,
-   "Price": 18.00
-  }`,
-  }
-);
+// const response = await fetch(
+//   "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback",
+//   {
+//     method: "POST",
+//     headers: {
+//       // Accept: "application/json",
+//       "Content-Type": "application/json",
+//     },
+//     body: `{
+//    "name": ${inputName}
+//   }`,
+//   }
+// );
 
-response.json().then((data) => {
-  console.log(data);
-});
+// async function test() {
+//   console.log(response);
+// }
+
+// test();
+
 // form.onsubmit = function (params) {
 //   console.log("submit");
 // };

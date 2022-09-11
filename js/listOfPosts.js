@@ -1,7 +1,7 @@
 import { renderThumbnails } from "./createHTMLelements/renderThumbnail.js";
 const container = document.querySelector(".list-of-post_container");
 
-const url = "http://localhost:10003/wp-json/wp/v2/posts";
+const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts";
 
 const categorySelector = document.querySelector("#category-selector");
 

@@ -5,7 +5,7 @@ const categoriesContainer = document.querySelector(".categories-container");
 
 carousel();
 
-const url = "http://localhost:10003/wp-json/wp/v2/categories/";
+const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/categories/";
 async function fetchCategories() {
   try {
     const response = await fetch(url);

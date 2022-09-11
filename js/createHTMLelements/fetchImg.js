@@ -2,7 +2,8 @@ import { createElement } from "./createElement.js";
 
 export async function fetchImg(post) {
   const id = post.featured_media;
-  const url = "http://localhost:10003/wp-json/wp/v2/media/" + id;
+  const url =
+    "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/media/" + id;
 
   try {
     const response = await fetch(url);

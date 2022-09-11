@@ -4,7 +4,7 @@ import { userAlert } from "./userAlert.js";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = `http://localhost:10003/wp-json/wp/v2/posts/${id}`;
+const url = `https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts/${id}`;
 
 const container = document.querySelector(".container");
 
