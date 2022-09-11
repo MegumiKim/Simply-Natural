@@ -52,64 +52,20 @@
 /* loader */
 
 .fa-spinner {
-  margin: auto;
-  font-size: 4em;
-  color: grey;
-  animation: spin 2s linear infinite;
+  margin: 100px auto;
+  font-size: 5em;
+  color: var(--color_beige);
+  animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
+  /* 50% {
+    transform: rotate(90deg);
+  } */
   100% {
     transform: rotate(360deg);
   }
 }
-/* 
-.heart {
-  color: grey;
-  border: none;
-  background: none;
-  font-size: 2em;
-  padding: 0 20px;
-} */
-/* 
-.checked,
-.heart:hover {
-  color: salmon;
-}
-
-.unchecked {
-  color: grey;
-} */
-
-/* .summary {
-  text-align: right;
-} */
-
-/* #csc-hint {
-  max-width: 200px;
-  display: none;
-}
-
-#question {
-  background: none;
-  border: none;
-  display: inline-block;
-}
-
-#question:hover {
-  color: darkred;
-} */
-
-/* .close-button {
-  position: absolute;
-  left: 20px;
-  top: 15px;
-  font-size: 1.5em;
-  border: 0px;
-  background-color: white;
-  color: var(--color_header);
-
-} */

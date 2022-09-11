@@ -147,6 +147,7 @@ nav a {
   flex: 1;
   position: relative;
   align-items: center;
+  padding: 0 30px;
 }
 
 .carousel-text-wrapper p {
@@ -169,7 +170,7 @@ a {
 } */
 
 .arrow {
-  bottom: 65%;
+  bottom: 50%;
   color: var(--color_grey);
   position: absolute;
   cursor: pointer;
@@ -249,4 +250,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.main-search {
+  margin: 0;
 }

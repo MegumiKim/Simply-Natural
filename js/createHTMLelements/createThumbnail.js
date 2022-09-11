@@ -15,8 +15,8 @@ export async function createThumbnail(post) {
   const category = await fetchCategory(post);
   const wrapper = createElement("div", "thumbnail-text-wrapper", undefined, [
     title,
-    category,
     date,
+    category,
   ]);
   const linkUrl = `/html/post.html?id=${post.id}`;
   const element = createElement("a", "thumbnail", undefined);

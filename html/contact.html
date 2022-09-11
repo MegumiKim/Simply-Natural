@@ -96,6 +96,19 @@
         <div class="user-feedback"></div>
         <input type="submit" value="send" name="message" class="cta form" />
       </form>
+
+      <form
+        action="http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback"
+        method="post"
+        id="test-form"
+      >
+        <label for="name">name</label>
+        <input type="text" id="name" name="user-name" />
+        <label for="tel">tel</label>
+        <input type="tel" id="tel" name="tel" />
+
+        <button type="submit" id="test-submit">submit test</button>
+      </form>
     </main>
     <footer>
       <div class="logo">Simply Natural</div>

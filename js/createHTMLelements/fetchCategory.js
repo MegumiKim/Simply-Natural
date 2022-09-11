@@ -2,6 +2,10 @@ import { userAlert } from "../userAlert.js";
 
 export async function fetchCategory(post) {
   const id = post.categories[0];
+  // const categories = post.categories;
+  // categories.forEach((id) => {
+  //   console.log(id);
+  // });
   const url = "http://localhost:10003/wp-json/wp/v2/categories/" + id;
 
   try {

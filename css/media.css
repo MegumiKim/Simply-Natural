@@ -1,4 +1,4 @@
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .carousel_item {
     display: flex;
     flex-direction: row;
@@ -16,9 +16,6 @@
   .read-button {
     position: static;
   }
-}
-
-@media (min-width: 700px) {
   body {
     font-size: 21px;
   }
@@ -49,6 +46,7 @@
 
   .thumbnail {
     flex-direction: row;
-    height: 100px;
+    height: 120px;
+    margin: 20px auto;
   }
 }

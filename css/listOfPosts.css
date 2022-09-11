@@ -26,12 +26,11 @@
 .category,
 .thumbnail_date {
   font-size: 16px;
-  margin-top: 10px;
-  text-align: right;
 }
 .category {
-  text-align: left;
-  margin-bottom: 0;
+  text-align: right;
+  margin-top: 0;
+  /* margin-bottom: 0; */
 }
 
 .thumbnail-text-wrapper {
@@ -75,4 +74,15 @@ input {
 button {
   border: none;
   background-color: var(--color_background);
+}
+
+.view-more {
+  text-decoration: underline;
+  margin: auto;
+  display: block;
+  font-size: large;
+}
+
+.view-more:hover {
+  background-color: #ab9989;
 }

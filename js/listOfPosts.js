@@ -3,8 +3,6 @@ const container = document.querySelector(".list-of-post_container");
 
 const url = "http://localhost:10003/wp-json/wp/v2/posts";
 
-// renderThumbnails(url, container);
-
 const categorySelector = document.querySelector("#category-selector");
 
 categorySelector.onchange = async function (event) {
@@ -31,3 +29,11 @@ export function sortByCategory() {
 }
 
 sortByCategory();
+
+const viewMore = document.querySelector(".view-more");
+
+viewMore.onclick = function () {
+  const newUrl = url + "?per_page=20";
+  renderThumbnails(newUrl, container);
+  viewMore.style.display = "none";
+};

@@ -17,13 +17,31 @@ contactForm.onsubmit = function (event) {
   }
 };
 
-async function fetchContactForm() {
-  const url = "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms";
+// async function fetchContactForm() {
+//   const url = "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms";
 
-  const response = await fetch(url);
-  const json = await response.json();
+//   const response = await fetch(url);
+//   const json = await response.json();
 
-  console.log(json);
-}
+//   console.log(json);
+// }
 
-fetchContactForm();
+// fetchContactForm();
+
+const url =
+  "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback";
+
+// const formSubmissionHandle = (event) =>{
+//   event.preventDefault();
+
+//   const formElement = event.target, {action, method} = formElement,
+//   body = new FormData(formElement
+//     )
+// }
+
+const inputName = document.querySelector("#name").value;
+
+const form = document.querySelector("#test-form");
+form.onsubmit = function () {
+  console.log("submit");
+};
