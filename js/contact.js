@@ -42,6 +42,44 @@ const url =
 const inputName = document.querySelector("#name").value;
 
 const form = document.querySelector("#test-form");
-form.onsubmit = function () {
-  console.log("submit");
-};
+
+const response = await fetch(
+  "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback",
+  {
+    method: "POST",
+    headers: {
+      // Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: `{
+   "Id": 78912,
+   "Customer": "Jason Sweet",
+   "Quantity": 1,
+   "Price": 18.00
+  }`,
+  }
+);
+
+response.json().then((data) => {
+  console.log(data);
+});
+// form.onsubmit = function (params) {
+//   console.log("submit");
+// };
+
+// const data = {
+//   inputName,
+//   tel,
+// };
+
+// const options = {
+//   method: "post",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify(data),
+// };
+
+// form.post("/api", (request, response) => {
+//   console.log(request);
+// });
