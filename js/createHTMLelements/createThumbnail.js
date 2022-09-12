@@ -1,6 +1,6 @@
 import { createElement } from "./createElement.js";
-import { fetchImg } from "./fetchImg.js";
-import { fetchCategory } from "./fetchCategory.js";
+// import { fetchImg } from "./fetchImg.js";
+// import { fetchCategory } from "./fetchCategory.js";
 import { formatDate } from "./formatDate.js";
 
 export async function createThumbnail(post) {
@@ -11,8 +11,22 @@ export async function createThumbnail(post) {
     formatDate(post),
     undefined
   );
-  const img = await fetchImg(post);
-  const category = await fetchCategory(post);
+
+  const img = await createElement(
+    "img",
+    "img-wrapper",
+    undefined,
+    undefined,
+    // post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail
+    //   .source_url
+    post._embedded["wp:featuredmedia"][0].source_url
+  );
+
+  const category = await createElement(
+    "div",
+    "category",
+    post._embedded["wp:term"][0][0].name
+  );
   const wrapper = createElement("div", "thumbnail-text-wrapper", undefined, [
     title,
     date,

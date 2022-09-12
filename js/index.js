@@ -30,3 +30,12 @@ async function fetchCategories() {
 }
 
 fetchCategories();
+
+async function fetchMedia(params) {
+  const url = "http://localhost:10003/wp-json/wp/v2/posts?id=52_embeded/";
+
+  const response = await fetch(url);
+  const json = await response.json();
+}
+
+fetchMedia();

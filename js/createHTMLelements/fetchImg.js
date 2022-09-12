@@ -4,6 +4,7 @@ export async function fetchImg(post) {
   const id = post.featured_media;
   const url =
     "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/media/" + id;
+    "onsole.log(json._embedded["wp:featuredmedia"][0].source_url"
 
   try {
     const response = await fetch(url);
