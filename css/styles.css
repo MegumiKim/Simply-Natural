@@ -26,6 +26,10 @@ h1,
   font-size: 2em;
 }
 
+h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
 img {
   width: 100%;
 }
@@ -177,7 +181,12 @@ a {
   display: block;
 } */
 
+.carousel:hover .arrow {
+  display: block;
+}
+
 .arrow {
+  display: none;
   bottom: 50%;
   color: var(--color_grey);
   position: absolute;
@@ -246,23 +255,76 @@ a {
 .category {
   font-style: italic;
 }
-.category-name {
-  display: inline-block;
-  margin: 10px;
-  border: var(--color_beige) 3px solid;
+
+.category-thumbnail {
+  /* display: inline-block; */
+  margin: 20px;
+  /* border: var(--color_beige) 3px solid; */
   border-radius: 10px;
   padding: 10px 20px;
+  height: 200px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.category-name:hover {
-  background-color: var(--color_beige);
+.category-name {
+  position: absolute;
+  bottom: 0;
 }
+/* .category-name:hover {
+  background-color: var(--color_beige);
+} */
 .categories-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
-.main-search {
-  margin: 0;
+.welcome,
+.featured-section {
+  margin: 5% 10%;
+}
+/* .sections-wrapper {
+  margin: auto;
+  max-width: 800px;
+} */
+
+.featured-one-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.featured-one-container > .thumbnail {
+  width: 200px;
+}
+
+/* .thumbnail_date {
+  display: none;
+} */
+
+/* .thumbnail_title {
+  font-size: 0.8em;
+} */
+
+.categories-container :nth-child(1) {
+  background-image: url(/images/organic-food/vegetables-933204_640.jpg);
+}
+.categories-container :nth-child(2) {
+  background-image: url(/images/others/woman-1274056_640.jpg);
+}
+.categories-container :nth-child(3) {
+  background-image: url(/images/organic-products/organic-4812597_1280.webp);
+}
+.categories-container :nth-child(4) {
+  background-image: url(/images/cycling/bicycle-1838604_640.jpg);
+}
+
+.categories-container :nth-child(5) {
+  background-image: url(/images/travel/yoga-2176668_640.webp);
 }

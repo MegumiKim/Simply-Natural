@@ -19,7 +19,7 @@ contactForm.onsubmit = function (event) {
 
 async function fetchContactForm() {
   const url =
-    "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback/schema";
+    "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79";
 
   const response = await fetch(url);
   const json = await response.json();
@@ -28,9 +28,25 @@ async function fetchContactForm() {
 }
 
 fetchContactForm();
+const form = document.querySelector("#test-form");
 
-const url =
-  "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
+// form.onclick = async function postForm() {
+//   console.log("working");
+//   const url =
+//     "http://localhost10008/wp-json/contact-form-7/v1/contact-forms/79/feedback";
+//   try {
+//     const response = await fetch(url, {
+//       method: form.method,
+//       body: new FormData(form),
+//     });
+//     console.log(response);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };
+
+// const url =
+//   "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback";
 
 // const formSubmissionHandle = (event) =>{
 //   event.preventDefault();
@@ -45,7 +61,7 @@ const url =
 // const form = document.querySelector("#test-form");
 
 // const response = await fetch(
-//   "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback",
+//   "http://localhost:10003/wp-json/contact-form-7/v1/contact-forms/79/feedback",
 //   {
 //     method: "POST",
 //     headers: {

@@ -1,6 +1,4 @@
 import { createElement } from "./createElement.js";
-// import { fetchImg } from "./fetchImg.js";
-// import { fetchCategory } from "./fetchCategory.js";
 import { formatDate } from "./formatDate.js";
 
 export async function createThumbnail(post) {

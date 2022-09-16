@@ -1,4 +1,4 @@
-// const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts";
+// const url = "http://localhost:10003/wp-json/wp/v2/posts";
 
 export async function fetchPosts(url) {
   try {

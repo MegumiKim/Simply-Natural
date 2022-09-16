@@ -10,3 +10,7 @@ export async function renderThumbnails(url, container) {
     container.append(thumbnail);
   });
 }
+
+// results.forEach(function (result){
+//   console.log(result.id);
+// }

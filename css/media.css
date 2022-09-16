@@ -13,6 +13,13 @@
   .arrow {
     bottom: 40%;
   }
+
+  .forward {
+    margin-right: 15px;
+  }
+  .back {
+    margin-left: 15px;
+  }
   .read-button {
     position: static;
   }
@@ -58,10 +65,21 @@
 
   .thumbnail {
     flex-direction: row;
-    height: 120px;
+    /* height: 120px; */
     margin: 20px auto;
   }
+
+  .featured-one-container {
+    margin: auto;
+    max-width: 800px;
+    flex-direction: row;
+  }
+
+  .featured-one-container > .thumbnail {
+    width: 200px;
+  }
 }
+
 @media (min-width: 1000px) {
   .carousel_title {
     font-size: 5rem;

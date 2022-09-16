@@ -6,7 +6,7 @@ import { createElement } from "./createElement.js";
 import { formatDate } from "./formatDate.js";
 
 export async function createCarouselItem(post) {
-  console.log(post);
+  // console.log(post);
   const title = createElement("a", "carousel_title", post.title.rendered);
 
   const date = createElement("p", "carousel_date", formatDate(post));

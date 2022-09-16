@@ -1,5 +1,5 @@
 const proxy = "https://noroffcors.herokuapp.com/";
-const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/categories/";
+const url = "http://localhost:10003/wp-json/wp/v2/categories/";
 
 export function sortByCategory() {
   const queryString = document.location.search;
