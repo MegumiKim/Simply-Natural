@@ -20,18 +20,33 @@ export async function createCarouselItem(post) {
     // post._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url
   );
 
-  // const category = await fetchCategory(post);
-  const category = await createElement(
-    "div",
-    "category",
-    post._embedded["wp:term"][0][0].name
-  );
-  const linkUrl = `/html/post.html?id=${post.id}`;
+  // const category = await createElement(
+  //   "div",
+  //   "category",
+  //   post._embedded["wp:term"][0][0].name
+  // );
 
+  const linkUrl = `/html/post.html?id=${post.id}`;
+  const categoriesContainer = createElement(
+    "div",
+    "categories-carousel-container",
+    undefined,
+    []
+  );
+  const categories = post._embedded["wp:term"][0];
+  categories.forEach(async function (category) {
+    const postCategory = await createElement(
+      "div",
+      "category-carousel",
+      category.name
+    );
+    console.log(category.name);
+    categoriesContainer.append(postCategory);
+  });
   const wrapper = createElement("div", "carousel-text-wrapper", undefined, [
     date,
     title,
-    category,
+    categoriesContainer,
   ]);
   title.href = linkUrl;
   // const rightArrow = createElement("button", "arrow", "&#10095;");

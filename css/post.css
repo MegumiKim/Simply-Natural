@@ -52,3 +52,40 @@ p {
   /* opacity: 1; */
   /* transform: scale(1.1); */
 }
+.categories-post-container {
+  display: flex;
+}
+
+.category-post {
+  border-right: solid grey 1px;
+  padding: 0 10px;
+  /* font-style: italic; */
+}
+
+.wp-block-latest-comments__comment-avatar {
+  max-width: 80px;
+  border-radius: 50%;
+}
+
+.wp-block-latest-comments__comment-link {
+  display: none;
+}
+
+.wp-block-latest-comments__comment-author {
+  display: block;
+}
+
+.wp-block-latest-comments__comment-excerpt {
+  border: 1px solid grey;
+  border-radius: 50px;
+  padding: 0 30px;
+}
+li.wp-block-latest-comments__comment::marker {
+  display: none;
+  color: var(--color_background);
+}
+
+.wp-block-latest-comments__comment-meta {
+  justify-content: flex-start;
+  gap: 20px;
+}

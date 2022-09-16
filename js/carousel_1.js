@@ -1,7 +1,7 @@
 import { createCarouselItem } from "./createHTMLelements/createCarouselItem.js";
 import { fetchPosts } from "./form/API/fetchPosts.js";
 
-const url = "http://localhost:10003/wp-json/wp/v2/posts?_embed&per_page=4";
+const url = "http://localhost:10003/wp-json/wp/v2/posts?_embed&per_page=5";
 const fetchedPosts = await fetchPosts(url);
 const container = document.querySelector(".caro_container");
 const dots = document.querySelectorAll(".dot");
@@ -20,7 +20,7 @@ const forward = document.querySelector(".forward");
 forward.onclick = function () {
   dots[index].classList.remove("carousel-dot_selected");
   backButton.style.display = "block";
-  index = (index + 1) % 4;
+  index = (index + 1) % 5;
   dots[index].classList.add("carousel-dot_selected");
   carousel();
 };
@@ -31,7 +31,7 @@ backButton.onclick = function () {
     backButton.style.display = "none";
   } else {
     dots[index].classList.remove("carousel-dot_selected");
-    index = Math.abs((index - 1) % 4);
+    index = Math.abs((index - 1) % 5);
     carousel();
     dots[index].classList.add("carousel-dot_selected");
   }

@@ -27,37 +27,41 @@ async function fetchPost(url) {
 
 async function renderPost(url) {
   const post = await fetchPost(url);
-
+  console.log(post);
   const title = document.querySelector("title");
   title.innerHTML = `Simply Natural | ${post.title.rendered}`;
 
   const h1 = createElement("h1", "h1-post", post.title.rendered);
   const categoriesContainer = createElement(
     "div",
-    "categories-container",
+    "categories-post-container",
     undefined,
     []
   );
   const categories = post._embedded["wp:term"][0];
   categories.forEach(async function (category) {
-    const postCategory = await createElement("div", "category", category.name);
-    console.log(category.name);
+    const postCategory = await createElement(
+      "div",
+      "category-post",
+      category.name
+    );
     categoriesContainer.append(postCategory);
   });
   const content = createElement("p", "content", post.content.rendered);
-  const img = await createElement(
-    "img",
-    "image",
-    undefined,
-    undefined,
-    post._embedded["wp:featuredmedia"][0].source_url
-    // post._embedded["wp:featuredmedia"][0].source_url
-  );
+  // const img = await createElement(
+  //   "img",
+  //   "image",
+  //   undefined,
+  //   undefined,
+  //   post._embedded["wp:featuredmedia"][0].source_url
+  //   // post._embedded["wp:featuredmedia"][0].source_url
+  // );
+  const comment = createElement("div", "comment", undefined);
   const element = createElement("div", "post", undefined, [
     h1,
     categoriesContainer,
     content,
-    img,
+    comment,
   ]);
 
   container.append(element);

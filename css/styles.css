@@ -67,22 +67,21 @@ li {
 .logo {
   font-family: "Oooh Baby", cursive, serif;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2em;
   color: black;
 }
 
-header {
-  margin: 20px;
-  margin-bottom: 10px;
-}
 header,
 footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
+  padding-top: 20px;
 }
-
+header {
+  margin: 20px;
+  /* margin-bottom: 10px; */
+}
 footer {
   margin-top: 10%;
 }
@@ -141,7 +140,7 @@ nav a {
 .carousel {
   position: relative;
   /* background-color: var(--color_background); */
-  background-color: #f6ebe2;
+  /* background-color: #f6ebe2; */
 }
 
 .carousel_item {
@@ -298,10 +297,11 @@ a {
   gap: 30px;
   flex-wrap: wrap;
   max-width: 500px;
+  justify-content: center;
 }
 
 .featured-one-container > .thumbnail {
-  width: 200px;
+  width: 250px;
 }
 
 /* .thumbnail_date {
@@ -327,4 +327,18 @@ a {
 
 .categories-container :nth-child(5) {
   background-image: url(/images/travel/yoga-2176668_640.webp);
+}
+
+.categories-carousel-container {
+  /* margin-top: 10%; */
+  justify-content: flex-end;
+  margin: 10px 0 20px 0;
+  display: flex;
+}
+
+.category-carousel {
+  border-right: solid grey 1px;
+  padding: 0 10px;
+  text-align: right;
+  /* font-style: italic; */
 }
