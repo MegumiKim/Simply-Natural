@@ -1,10 +1,13 @@
 import { createElement } from "./createHTMLelements/createElement.js";
+import { formatDate } from "./createHTMLelements/formatDate.js";
 import { modalFunc } from "./modal.js";
 import { userAlert } from "./userAlert.js";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = `http://localhost:10003/wp-json/wp/v2/posts/${id}?_embed`;
+const url = `http://localhost:10003/wp-json/wp/v2/posts/${id}?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term`;
+
+// const url = `http://localhost:10003/wp-json/wp/v2/posts/${id}?_embed`;
 
 const container = document.querySelector(".container");
 
@@ -13,12 +16,6 @@ async function fetchPost(url) {
     const response = await fetch(url);
     const json = await response.json();
 
-    // const imageSrc = json._embedded["wp:featuredmedia"];
-    // const category = json._embedded["wp:term"][0][0].name;
-    // const smallImage =
-    //   json._embedded["wp:featuredmedia"][0].media_details.sizes.large
-    //     .source_url;
-    // console.log(smallImage);
     return json;
   } catch (e) {
     container.innerHTML = userAlert("error", "Failed to fetch data");
@@ -27,39 +24,14 @@ async function fetchPost(url) {
 
 async function renderPost(url) {
   const post = await fetchPost(url);
-  console.log(post);
   const title = document.querySelector("title");
   title.innerHTML = `Simply Natural | ${post.title.rendered}`;
-
   const h1 = createElement("h1", "h1-post", post.title.rendered);
-  const categoriesContainer = createElement(
-    "div",
-    "categories-post-container",
-    undefined,
-    []
-  );
-  const categories = post._embedded["wp:term"][0];
-  categories.forEach(async function (category) {
-    const postCategory = await createElement(
-      "div",
-      "category-post",
-      category.name
-    );
-    categoriesContainer.append(postCategory);
-  });
   const content = createElement("p", "content", post.content.rendered);
-  // const img = await createElement(
-  //   "img",
-  //   "image",
-  //   undefined,
-  //   undefined,
-  //   post._embedded["wp:featuredmedia"][0].source_url
-  //   // post._embedded["wp:featuredmedia"][0].source_url
-  // );
+
   const comment = createElement("div", "comment", undefined);
   const element = createElement("div", "post", undefined, [
     h1,
-    categoriesContainer,
     content,
     comment,
   ]);
@@ -76,3 +48,35 @@ renderPost(url);
 //     console.log(figure);
 //   });
 // }
+
+const commentsContainer = document.querySelector(".comments");
+async function fetchComments(id) {
+  const commentsUrl = `http://localhost:10003/wp-json/wp/v2/comments?post=${id}`;
+
+  const response = await fetch(commentsUrl);
+  const json = await response.json();
+
+  return json;
+}
+
+async function renderComment(postID) {
+  const comments = await fetchComments(postID);
+
+  if (comments) {
+    comments.forEach((comment) => {
+      const name = createElement("p", "name_comment", comment.author_name);
+      const dateFormatted = formatDate(comment);
+      const date = createElement("time", "date_comment", dateFormatted);
+      const metaData = createElement("div", "comment-meta", undefined, [
+        name,
+        date,
+      ]);
+      const content = comment.content.rendered;
+      const element = createElement("div", "comment", content, [metaData]);
+
+      commentsContainer.append(element);
+    });
+  }
+}
+
+renderComment(id);

@@ -9,5 +9,6 @@ export function formatDate(post) {
     // minute: none,
     // hour12: false,
   });
+
   return formattedDate;
 }

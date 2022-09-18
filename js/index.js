@@ -2,29 +2,40 @@ import { carousel } from "./carousel_1.js";
 import { userAlert } from "./userAlert.js";
 import { createElement } from "./createHTMLelements/createElement.js";
 import { renderThumbnails } from "./createHTMLelements/renderThumbnail.js";
+import { createThumbnail } from "./createHTMLelements/createThumbnail.js";
 const categoriesContainer = document.querySelector(".categories-container");
 
 carousel();
 
 const featuredOne = document.querySelector(".featured-one-container");
-const featuredTwo = document.querySelector(".featured-two");
+const featuredTwo = document.querySelector(".featured-two-container");
 
+// rendering trending topics
 const featuredCategoryUrl =
-  "http://localhost:10003/wp-json/wp/v2/posts?_embed&categories=3";
+  "http://localhost:10003/wp-json/wp/v2/posts?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term&categories=3";
 
 renderThumbnails(featuredCategoryUrl, featuredOne);
 
-// async function getFeaturedItems() {
-//   const response = await fetch(featuredCategoryUrl);
-//   const json = await response.json();
+// rendering top story
+const topStoryUrl =
+  "http://localhost:10003/wp-json/wp/v2/posts/86?_fields=id,date,title,_links,_embedded&_embed=wp:featuredmedia,wp:term";
 
-//   json.forEach((post) => {
-//     console.log(post._embedded);
-//   });
-//   console.log(json);
-// }
+async function getFeaturedItem(url) {
+  const response = await fetch(url);
+  const json = await response.json();
 
-// getFeaturedItems();
+  const html = await createThumbnail(json);
+
+  featuredTwo.append(html);
+  console.log(html);
+}
+
+getFeaturedItem(topStoryUrl);
+
+async function renderTopStory(post) {
+  const img = createElement();
+}
+
 const url = "http://localhost:10003/wp-json/wp/v2/categories/";
 async function fetchCategories() {
   try {
@@ -49,7 +60,7 @@ async function fetchCategories() {
   }
 }
 
-fetchCategories();
+// fetchCategories();
 
 // async function fetchMedia(params) {
 //   const url = "http://localhost:10003/wp-json/wp/v2/posts?id=52_embeded/";

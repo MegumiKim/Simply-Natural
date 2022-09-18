@@ -6,6 +6,7 @@ export async function renderThumbnails(url, container) {
   const fetchedPost = await fetchPosts(url);
 
   fetchedPost.forEach(async function (post) {
+    console.log(post);
     const thumbnail = await createThumbnail(post);
     container.append(thumbnail);
   });

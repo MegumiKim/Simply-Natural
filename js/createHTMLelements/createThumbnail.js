@@ -20,15 +20,26 @@ export async function createThumbnail(post) {
     post._embedded["wp:featuredmedia"][0].source_url
   );
 
-  const category = await createElement(
+  // const category = await createElement(
+  //   "div",
+  //   "category",
+  //   post._embedded["wp:term"][0][0].name
+  // );
+  const categoriesContainer = createElement(
     "div",
-    "category",
-    post._embedded["wp:term"][0][0].name
+    "categories-thumbnail-container",
+    undefined,
+    []
   );
+  const categories = post._embedded["wp:term"][0];
+  categories.forEach(async function (category) {
+    const postCategory = await createElement("div", "category", category.name);
+    categoriesContainer.append(postCategory);
+  });
   const wrapper = createElement("div", "thumbnail-text-wrapper", undefined, [
     title,
     date,
-    category,
+    categoriesContainer,
   ]);
   const linkUrl = `/html/post.html?id=${post.id}`;
   const element = createElement("a", "thumbnail", undefined);
