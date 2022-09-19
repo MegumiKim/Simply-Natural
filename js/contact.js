@@ -26,7 +26,6 @@ form.onsubmit = async function postForm() {
   const password = "6z9A 2wbE LuRu 5Av1 GhBo exXH";
 
   try {
-    console.log(new FormData(form));
     const response = await fetch(url, {
       method: form.method,
       headers: {
