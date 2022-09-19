@@ -58,37 +58,39 @@ renderPost(url);
 //   });
 // }
 
-const commentsContainer = document.querySelector(".comments");
-async function fetchComments(id) {
-  const commentsUrl = `https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=${id}`;
+// Show Comments
 
-  const response = await fetch(commentsUrl);
-  const json = await response.json();
+// const commentsContainer = document.querySelector(".comments");
+// async function fetchComments(id) {
+//   const commentsUrl = `https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=${id}`;
 
-  return json;
-}
+//   const response = await fetch(commentsUrl);
+//   const json = await response.json();
 
-async function renderComment(postID) {
-  const comments = await fetchComments(postID);
+//   return json;
+// }
 
-  if (comments) {
-    comments.forEach((comment) => {
-      const name = createElement("p", "name_comment", comment.author_name);
-      const dateFormatted = formatDate(comment);
-      const date = createElement("time", "date_comment", dateFormatted);
-      const metaData = createElement("div", "comment-meta", undefined, [
-        name,
-        date,
-      ]);
-      const content = comment.content.rendered;
-      const element = createElement("div", "user-comment", content, [metaData]);
+// async function renderComment(postID) {
+//   const comments = await fetchComments(postID);
 
-      commentsContainer.append(element);
-    });
-  }
-}
+//   if (comments) {
+//     comments.forEach((comment) => {
+//       const name = createElement("p", "name_comment", comment.author_name);
+//       const dateFormatted = formatDate(comment);
+//       const date = createElement("time", "date_comment", dateFormatted);
+//       const metaData = createElement("div", "comment-meta", undefined, [
+//         name,
+//         date,
+//       ]);
+//       const content = comment.content.rendered;
+//       const element = createElement("div", "user-comment", content, [metaData]);
 
-renderComment(id);
+//       commentsContainer.append(element);
+//     });
+//   }
+// }
+
+// renderComment(id);
 
 const relatedContainer = document.querySelector(".related-posts-container");
 
@@ -105,7 +107,32 @@ async function renderRelatedPosts(url, relatedContainer, excludeID) {
     categoryID +
     `&exclude=${excludeID}`;
 
+  console.log(relatedPostUrl);
+
   renderThumbnails(relatedPostUrl, relatedContainer);
 }
 
 renderRelatedPosts(url, relatedContainer, id);
+
+// const commentForm = document.querySelector("#comment-form");
+
+// commentForm.onsubmit = async function postForm() {
+//   // const proxy = "https://noroffcors.herokuapp.com/";
+//   const url =
+//     "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
+//   try {
+//     console.log(new FormData(form));
+//     const response = await fetch(url, {
+//       method: form.method,
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: new FormData(form),
+//     });
+
+//     form.innerHTML = userAlert("success", "Thank you");
+//     console.log(response);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };

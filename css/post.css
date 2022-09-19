@@ -14,13 +14,13 @@ h1,
 }
 figure {
   max-width: 500px;
-  /* margin-left: 0; */
   cursor: pointer;
   height: auto;
 }
 
 .content {
-  margin-top: 0;
+  max-width: 40rem;
+  margin: auto;
 }
 img {
   /* width: 100%; */

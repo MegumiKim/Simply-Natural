@@ -21,3 +21,10 @@ searchButton.onclick = async function () {
   container.innerHTML = "";
   renderThumbnails(newUrl, container);
 };
+
+searchButton.addEventListener("touched", async function () {
+  const userInput = searchInput.value.toLowerCase().trim();
+  const newUrl = url + `?search=${userInput}`;
+  container.innerHTML = "";
+  renderThumbnails(newUrl, container);
+});

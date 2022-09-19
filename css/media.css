@@ -103,10 +103,10 @@
     font-size: 5rem;
     margin: auto;
   }
-  .content > p,
+  /* .content > p,
   .content > ul {
     margin-left: 400px;
-  }
+  } */
 
   header {
     margin-right: 10%;

@@ -42,19 +42,3 @@ form.onsubmit = async function postForm() {
     console.log(e);
   }
 };
-
-// const formContainer = document.querySelector(".form-container");
-
-// async function getContactForm() {
-//   const formPageUrl = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/pages/81";
-
-//   const response = await fetch(formPageUrl);
-//   const json = await response.json();
-//   // console.log(json);
-
-//   formContainer.innerHTML += json.content.rendered;
-
-//   };
-// }
-
-// getContactForm();
