@@ -24,13 +24,14 @@ form.onsubmit = async function postForm() {
 
   const userName = "SimplyNatural";
   const password = "6z9A 2wbE LuRu 5Av1 GhBo exXH";
+
   try {
     console.log(new FormData(form));
     const response = await fetch(url, {
-      method: POST,
+      method: form.method,
       headers: {
         "Content-Type": "application/json",
-        // "Authorization": "Basic" + userName + ":" + password,
+        // Authorization: "Basic" + userName + ":" + password,
       },
       body: new FormData(form),
     });
