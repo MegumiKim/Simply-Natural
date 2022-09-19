@@ -28,10 +28,10 @@ form.onsubmit = async function postForm() {
   try {
     console.log(new FormData(form));
     const response = await fetch(url, {
-      method: "POST",
+      method: form.method,
       headers: {
         "Content-Type": "application/json",
-        // Authorization: "Basic" + userName + ":" + password,
+        Authorization: "Basic" + userName + ":" + password,
       },
       body: new FormData(form),
     });
