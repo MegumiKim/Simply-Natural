@@ -12,13 +12,13 @@ const featuredTwo = document.querySelector(".featured-two-container");
 
 // rendering trending topics
 const featuredCategoryUrl =
-  "http://localhost:10003/wp-json/wp/v2/posts?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term&categories=3";
+  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term&categories=3";
 
 renderThumbnails(featuredCategoryUrl, featuredOne);
 
 // rendering top story
 const topStoryUrl =
-  "http://localhost:10003/wp-json/wp/v2/posts/86?_fields=id,date,title,_links,_embedded&_embed=wp:featuredmedia,wp:term";
+  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts/86?_fields=id,date,title,_links,_embedded&_embed=wp:featuredmedia,wp:term";
 
 async function getFeaturedItem(url) {
   const response = await fetch(url);
@@ -36,7 +36,7 @@ async function renderTopStory(post) {
   const img = createElement();
 }
 
-const url = "http://localhost:10003/wp-json/wp/v2/categories/";
+const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/categories/";
 async function fetchCategories() {
   try {
     const response = await fetch(url);
@@ -63,7 +63,7 @@ async function fetchCategories() {
 // fetchCategories();
 
 // async function fetchMedia(params) {
-//   const url = "http://localhost:10003/wp-json/wp/v2/posts?id=52_embeded/";
+//   const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?id=52_embeded/";
 
 //   const response = await fetch(url);
 //   const json = await response.json();

@@ -7,7 +7,8 @@ export async function fetchCategory(post) {
   // categories.forEach((id) => {
   //   console.log(id);
   // });
-  const url = "http://localhost:10003/wp-json/wp/v2/categories/" + id;
+  const url =
+    "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/categories/" + id;
 
   try {
     const response = await fetch(url);

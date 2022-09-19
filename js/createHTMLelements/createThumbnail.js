@@ -2,6 +2,7 @@ import { createElement } from "./createElement.js";
 import { formatDate } from "./formatDate.js";
 
 export async function createThumbnail(post) {
+  console.log(post);
   const title = createElement("h3", "thumbnail_title", post.title.rendered);
   const date = createElement(
     "p",

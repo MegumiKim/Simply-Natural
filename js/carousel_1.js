@@ -1,7 +1,8 @@
 import { createCarouselItem } from "./createHTMLelements/createCarouselItem.js";
 import { fetchPosts } from "./form/API/fetchPosts.js";
 
-const url = "http://localhost:10003/wp-json/wp/v2/posts?_embed&per_page=5";
+const url =
+  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed&per_page=5";
 const fetchedPosts = await fetchPosts(url);
 const container = document.querySelector(".caro_container");
 const dots = document.querySelectorAll(".dot");

@@ -31,17 +31,18 @@
   margin: 1em auto;
   padding: 1em;
   border-radius: 5px;
+  max-width: fit-content;
 }
 
 .error {
   color: darkred;
   border: darkred 2px solid;
-  background: rgb(248, 231, 231);
+  /* background: rgb(248, 231, 231); */
 }
 .success {
   color: darkgreen;
   border: green solid 2px;
-  background: rgb(222, 248, 222);
+  /* background: rgb(222, 248, 222); */
 }
 
 .neutral {

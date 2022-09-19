@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Feel free to write me any feedback or request here"
+      content="Feel free to write me any feedback or request on the posts here"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Arsenal&family=Cormorant+Garamond:wght@300;400&family=Oooh+Baby&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Cormorant+Garamond:wght@300;400&family=Oooh+Baby&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
@@ -52,11 +52,12 @@
       </div>
       <h1>Contact</h1>
 
-      <form class="contact-form">
+      <form id="contact-form" method="POST" action="">
         <label for="name">Name</label>
         <input
           type="text"
           id="name"
+          name="your-name"
           class="form__input"
           placeholder=" min 5 letters "
           required
@@ -66,6 +67,7 @@
         <input
           type="text"
           id="subject"
+          name="your-subject"
           class="form__input"
           placeholder=" min 15 letters"
           required
@@ -75,6 +77,7 @@
         <input
           type="email"
           id="email"
+          name="your-email"
           class="form__input"
           placeholder=" example@email.com"
           required
@@ -85,8 +88,9 @@
         <textarea
           name="message"
           id="message"
+          name="your-message"
           class="form__input"
-          placeholder=" min 25 letters"
+          placeholder="min 25 letters"
           required
         ></textarea>
         <div class="form-error message-error"></div>
@@ -94,9 +98,8 @@
         <label for="sign-up">Sign-up for news letter</label>
 
         <div class="user-feedback"></div>
-        <input type="submit" value="send" name="message" class="cta form" />
+        <input type="submit" value="Send" name="Submit" class="cta form" />
       </form>
-
       <div class="form-container"></div>
     </main>
     <footer>

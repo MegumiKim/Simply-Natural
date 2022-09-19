@@ -7,11 +7,17 @@ body {
   color: var(--color_black);
   /* background-color: var(--color_background); */
   font-size: 16px;
-  font-family: "arsenal", Cambria, Cochin, Georgia, serif;
+  font-family: "Barlow", Cambria, Cochin, Georgia, serif;
   margin: 0 auto;
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+section {
+  margin: 0 auto;
+  padding: 5%;
+  padding-bottom: 10%;
 }
 
 h1,
@@ -31,11 +37,9 @@ h2 {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 5%;
 }
-h3 {
-  font-size: 1.3em;
-  /* font-weight: bold; */
-}
+
 img {
   width: 100%;
 }
@@ -47,14 +51,15 @@ main {
 
 .main-full {
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
 }
 /* h1,
 h2 {
   font-family: "Libre Caslon Display";
 } */
 .cta,
-.wpcf7-submit {
+.wpcf7-submit,
+#submit {
   display: block;
   width: fit-content;
   text-decoration: none;
@@ -67,7 +72,8 @@ h2 {
 }
 
 .cta:hover,
-.wpcf7-submit:hover {
+.wpcf7-submit,
+#submit:hover {
   background-color: #a77272;
 }
 
@@ -93,7 +99,6 @@ footer {
   padding: 60px;
   background-color: var(--color_black);
   color: white;
-  margin-top: 10%;
   justify-content: center;
   text-align: center;
 }
@@ -172,12 +177,13 @@ nav a {
 /* .carousel:hover {
   background-color: rgba(0, 0, 0, 0.2);
 } */
-.img-wrapper {
+
+.carousel-img {
   flex: 2;
 }
 .carousel-text-wrapper {
   flex: 1;
-  position: relative;
+  /* position: relative; */
   align-items: center;
   padding: 0 30px;
 }
@@ -234,7 +240,7 @@ a {
   background-color: var(--color_beige);
   border-radius: 50%;
   display: inline-block;
-  margin-block-end: 5px;
+  /* margin-block-end: 5px; */
   bottom: 20px;
 }
 
@@ -251,19 +257,9 @@ a {
   margin: auto;
 }
 
-/* .read-button {
-  background-color: #d99c9c;
-  text-decoration: none;
-  padding: 10px 30px;
-  font-size: 18px;
-  color: var(--color_black);
-  display: inline-block;
-  max-width: fit-content;
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 80px;
-} */
+.caro_container {
+  width: fit-content;
+}
 
 .carousel_title {
   margin-bottom: 0;
@@ -284,20 +280,17 @@ a {
   position: absolute;
   width: 100%;
   text-align: center;
-  bottom: 5px;
+  bottom: 0px;
   padding: 5px 0;
   background-color: #f6ebe2;
   opacity: 85%;
+  font-weight: inherit;
 }
 
 .welcome {
   max-width: 800px;
 }
 
-section {
-  margin: 0 auto;
-  padding: 7%;
-}
 /* .sections-wrapper {
   margin: auto;
   max-width: 800px;
@@ -316,7 +309,7 @@ section {
   gap: 40px;
   flex-wrap: wrap;
   max-width: 500px;
-  /* justify-content: center; */
+  justify-content: center;
 }
 
 .featured-two-container {
@@ -331,7 +324,7 @@ section {
 .category-thumbnail {
   margin: 20px auto;
   border-radius: 10px;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   height: 200px;
   width: 250px;
   background-size: cover;
@@ -349,22 +342,29 @@ section {
   display: none;
 }
 
+.thumbnail_title {
+  font-size: 1em;
+}
+
+.thumbnail_title:hover {
+  text-decoration: underline;
+}
 .featured-two-container .thumbnail_title {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: 0;
 }
 
 .category-thumbnail.one {
-  background-image: url(/images/organic-food/vegetables-933204_640.jpg);
-}
-.categories-container :nth-child(2) {
-  background-image: url(/images/others/woman-1274056_640.jpg);
-}
-.categories-container :nth-child(3) {
   background-image: url(/images/organic-products/organic-4812597_1280.webp);
 }
-.categories-container :nth-child(4) {
+.categories-container :nth-child(2) {
   background-image: url(/images/cycling/bicycle-1838604_640.jpg);
+}
+.categories-container :nth-child(3) {
+  background-image: url(/images/organic-food/cereal-3091299_1280.jpg);
+}
+.categories-container :nth-child(4) {
+  background-image: url(/images/others/woman-1274056_640.jpg);
 }
 
 .categories-container :nth-child(5) {
@@ -374,7 +374,7 @@ section {
 .categories-carousel-container {
   /* margin-top: 10%; */
   justify-content: flex-end;
-  margin: 10px 0 20px 0;
+  margin: 10px 40px 20px 0;
   display: flex;
 }
 

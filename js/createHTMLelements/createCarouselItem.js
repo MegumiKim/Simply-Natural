@@ -8,7 +8,7 @@ export async function createCarouselItem(post) {
   const date = createElement("p", "carousel_date", formatDate(post));
   const img = await createElement(
     "img",
-    "img-wrapper",
+    "carousel-img",
     undefined,
     undefined,
     post._embedded["wp:featuredmedia"][0].source_url

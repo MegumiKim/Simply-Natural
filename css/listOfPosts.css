@@ -16,7 +16,8 @@
   background-color: var(--color_beige);
 }
 .img-wrapper {
-  max-width: 150px;
+  max-width: 250px;
+  margin: 20px;
 }
 
 .category,
@@ -30,7 +31,7 @@
 }
 
 .thumbnail-text-wrapper {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
   /* gap: 20px; */

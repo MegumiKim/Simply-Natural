@@ -1,9 +1,9 @@
 import { renderThumbnails } from "./createHTMLelements/renderThumbnail.js";
 const container = document.querySelector(".list-of-post_container");
 
-// const url = "http://localhost:10003/wp-json/wp/v2/posts?_embed";
+// const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed";
 const url =
-  "http://localhost:10003/wp-json/wp/v2/posts?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term";
+  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term";
 
 const categorySelector = document.querySelector("#category-selector");
 
