@@ -36,6 +36,7 @@
   }
   .main-search {
     width: 100%;
+    padding: 0;
   }
 
   .main-full {
@@ -89,8 +90,16 @@
   }
 
   .about-frame {
-    max-width: 800px;
+    max-width: 600px;
     /* margin: 0; */
+  }
+
+  section {
+    padding: 8%;
+  }
+
+  h2 {
+    margin: 0 auto 5% auto;
   }
 }
 

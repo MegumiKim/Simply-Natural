@@ -37,7 +37,7 @@ h2 {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 5%;
+  margin: 10% auto;
 }
 
 img {
@@ -66,7 +66,7 @@ h2 {
   color: var(--color_black);
   background-color: #d99c9c;
   padding: 10px 20px;
-  margin: 5% auto;
+  margin: 10% auto;
   border: none;
   cursor: pointer;
 }
