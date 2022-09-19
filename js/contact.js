@@ -21,12 +21,16 @@ form.onsubmit = async function postForm() {
   // const proxy = "https://noroffcors.herokuapp.com/";
   const url =
     "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
+
+  const userName = "SimplyNatural";
+  const password = "6z9A 2wbE LuRu 5Av1 GhBo exXH";
   try {
     console.log(new FormData(form));
     const response = await fetch(url, {
-      method: form.method,
+      method: POST,
       headers: {
         "Content-Type": "application/json",
+        // "Authorization": "Basic" + userName + ":" + password,
       },
       body: new FormData(form),
     });

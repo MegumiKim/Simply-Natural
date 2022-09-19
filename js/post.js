@@ -1,7 +1,6 @@
 import { createElement } from "./createHTMLelements/createElement.js";
 import { formatDate } from "./createHTMLelements/formatDate.js";
 import { renderThumbnails } from "./createHTMLelements/renderThumbnail.js";
-import { fetchPosts } from "./form/API/fetchPosts.js";
 import { modalFunc } from "./modal.js";
 import { userAlert } from "./userAlert.js";
 const queryString = document.location.search;
