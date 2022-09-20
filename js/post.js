@@ -116,7 +116,8 @@ renderRelatedPosts(url, relatedContainer, id);
 
 const commentForm = document.querySelector("#comment-form");
 
-commentForm.onsubmit = async function postForm() {
+commentForm.onsubmit = async function postForm(event) {
+  event.preventDefault();
   // const proxy = "https://noroffcors.herokuapp.com/";
   const url =
     "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=52";
