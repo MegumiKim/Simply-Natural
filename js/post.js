@@ -114,19 +114,19 @@ async function renderRelatedPosts(url, relatedContainer, excludeID) {
 
 renderRelatedPosts(url, relatedContainer, id);
 
-const commentForm = document.querySelector("#comment-form");
+const form = document.querySelector("#comment-form");
 
-commentForm.onsubmit = async function postForm(event) {
+form.onsubmit = async function postForm(event) {
   event.preventDefault();
   // const proxy = "https://noroffcors.herokuapp.com/";
   const url =
     "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=52";
   try {
-    console.log(new FormData(form));
     const response = await fetch(url, {
       method: form.method,
       body: new FormData(form),
     });
+    console.log(response);
 
     form.innerHTML = userAlert("success", "Thank you");
     console.log(response);
