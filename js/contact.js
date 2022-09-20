@@ -7,6 +7,8 @@ const userFeedback = document.querySelector(".user-feedback");
 form.onsubmit = async function (event) {
   event.preventDefault();
   if (validateContactForm()) {
+    const url =
+      "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
     const response = await fetch(url, {
       method: form.method,
       headers: {
@@ -26,27 +28,27 @@ form.onsubmit = async function (event) {
   }
 };
 
-form.onsubmit = async function postForm() {
-  // const proxy = "https://noroffcors.herokuapp.com/";
-  const url =
-    "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
+// form.onsubmit = async function postForm() {
+//   const proxy = "https://noroffcors.herokuapp.com/";
+//   const url =
+//     "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
 
-  // const userName = "SimplyNatural";
-  // const password = "6z9A 2wbE LuRu 5Av1 GhBo exXH";
+//   const userName = "SimplyNatural";
+//   const password = "6z9A 2wbE LuRu 5Av1 GhBo exXH";
 
-  try {
-    const response = await fetch(url, {
-      method: form.method,
-      headers: {
-        "Content-Type": "application/json",
-        // Authorization: "Basic" + userName + ":" + password,
-      },
-      body: new FormData(form),
-    });
+//   try {
+//     const response = await fetch(url, {
+//       method: form.method,
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: "Basic" + userName + ":" + password,
+//       },
+//       body: new FormData(form),
+//     });
 
-    form.innerHTML = userAlert("success", "Thank you");
-    console.log(response);
-  } catch (e) {
-    console.log(e);
-  }
-};
+//     form.innerHTML = userAlert("success", "Thank you");
+//     console.log(response);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };
