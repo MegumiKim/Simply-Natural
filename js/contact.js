@@ -11,10 +11,10 @@ form.onsubmit = async function (event) {
       "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
     const response = await fetch(url, {
       method: form.method,
-      headers: {
-        "Content-Type": "application/json",
-        // Authorization: "Basic" + userName + ":" + password,
-      },
+      // headers: {
+      //   "Content-Type": "application/json",
+      // Authorization: "Basic" + userName + ":" + password,
+      // },
       body: new FormData(form),
     });
     console.log(response);
