@@ -114,25 +114,22 @@ async function renderRelatedPosts(url, relatedContainer, excludeID) {
 
 renderRelatedPosts(url, relatedContainer, id);
 
-// const commentForm = document.querySelector("#comment-form");
+const commentForm = document.querySelector("#comment-form");
 
-// commentForm.onsubmit = async function postForm() {
-//   // const proxy = "https://noroffcors.herokuapp.com/";
-//   const url =
-//     "https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback";
-//   try {
-//     console.log(new FormData(form));
-//     const response = await fetch(url, {
-//       method: form.method,
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: new FormData(form),
-//     });
+commentForm.onsubmit = async function postForm() {
+  // const proxy = "https://noroffcors.herokuapp.com/";
+  const url =
+    "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=52";
+  try {
+    console.log(new FormData(form));
+    const response = await fetch(url, {
+      method: form.method,
+      body: new FormData(form),
+    });
 
-//     form.innerHTML = userAlert("success", "Thank you");
-//     console.log(response);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
+    form.innerHTML = userAlert("success", "Thank you");
+    console.log(response);
+  } catch (e) {
+    console.log(e);
+  }
+};
