@@ -8,7 +8,6 @@ export async function renderThumbnails(url, container) {
 
   if (fetchedPost.length) {
     fetchedPost.forEach(async function (post) {
-      console.log(post);
       const thumbnail = await createThumbnail(post);
       container.append(thumbnail);
     });

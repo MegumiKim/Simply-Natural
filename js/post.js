@@ -6,7 +6,7 @@ import { userAlert } from "./userAlert.js";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = `https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts/${id}?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term`;
+const url = `https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts/52?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term`;
 
 // const url = `https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts/${id}?_embed`;
 
@@ -25,13 +25,11 @@ async function fetchPost(url) {
 
 async function renderPost(url) {
   const post = await fetchPost(url);
-  console.log(post._embedded["wp:term"][0][0].id);
+  // console.log(post._embedded["wp:term"][0][0].id);
   const relatedPostUrl =
     "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts/?category=" +
     post._embedded["wp:term"][0][0].id +
     "&per_page=2";
-
-  console.log(relatedPostUrl);
 
   const title = document.querySelector("title");
   title.innerHTML = `Simply Natural | ${post.title.rendered}`;
@@ -42,7 +40,7 @@ async function renderPost(url) {
   const element = createElement("div", "post", undefined, [
     h1,
     content,
-    comment,
+    // comment,
   ]);
 
   container.append(element);
@@ -107,30 +105,69 @@ async function renderRelatedPosts(url, relatedContainer, excludeID) {
     categoryID +
     `&exclude=${excludeID}`;
 
-  console.log(relatedPostUrl);
-
   renderThumbnails(relatedPostUrl, relatedContainer);
 }
 
-renderRelatedPosts(url, relatedContainer, id);
+// renderRelatedPosts(url, relatedContainer, id);
 
 const form = document.querySelector("#comment-form");
-
-form.onsubmit = async function postForm(event) {
+const userFeedback = document.querySelector("#user-feedback");
+form.onSubmit = async function handleSubmit(event) {
   event.preventDefault();
-  // const proxy = "https://noroffcors.herokuapp.com/";
-  const url =
-    "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=52";
-  try {
-    const response = await fetch(url, {
-      method: form.method,
-      body: new FormData(form),
-    });
-    console.log(response);
+  console.log(event);
 
-    form.innerHTML = userAlert("success", "Thank you");
-    console.log(response);
-  } catch (e) {
-    console.log(e);
-  }
+  const [postId, name, email, comment] = event.target.elements;
+
+  const data = JSON.stringify({
+    post: postId.value,
+    author_name: name.value,
+    author_email: email.value,
+    content: comment.value,
+  });
+
+  const ACTION_URL =
+    "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments/?post=52";
+  const response = await fetch(ACTION_URL, {
+    method: form.method,
+    // headers: {
+    //   "Content-Type": "application/json",
+    // },
+    // body: data,
+    body: new FormData(form),
+  })
+    .then((response) => {
+      console.log(response);
+      if (response.ok === true) {
+        userFeedback.innerHTML = userAlert(
+          "success",
+          "Thank you for your message"
+        );
+        form.reset();
+        // Submitted successfully!
+      }
+
+      return response.json();
+    })
+    .then((object) => {
+      userFeedback.innerHTML = userAlert("error", "it didn't go");
+    })
+    .catch((error) => console.error("Error:", error));
 };
+// form.onsubmit = async function postForm(event) {
+//   event.preventDefault();
+//   // const proxy = "https://noroffcors.herokuapp.com/";
+//   const url =
+//     "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=52";
+//   try {
+//     const response = await fetch(url, {
+//       method: form.method,
+//       body: new FormData(form),
+//     });
+//     console.log(response);
+
+//     form.innerHTML = userAlert("success", "Thank you");
+//     console.log(response);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };

@@ -3,7 +3,17 @@
 /* @import "listOfPosts.css"; */
 
 /* global */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
 body {
+  height: 100%;
+  width: 100%;
+
   color: var(--color_black);
   /* background-color: var(--color_background); */
   font-size: 18px;
@@ -40,6 +50,9 @@ h2 {
   margin: 10% auto;
 }
 
+h3 {
+  margin: 3% auto;
+}
 img {
   width: 100%;
 }
@@ -66,7 +79,7 @@ h2 {
   color: var(--color_black);
   background-color: #d99c9c;
   padding: 10px 20px;
-  margin: 10% auto;
+  margin: 5% auto;
   border: none;
   cursor: pointer;
 }
@@ -77,8 +90,11 @@ h2 {
   background-color: #a77272;
 }
 
+ul {
+  list-style: none;
+}
 li {
-  line-height: 200%;
+  line-height: 2;
 }
 /* header */
 .logo {
@@ -163,6 +179,9 @@ nav a {
 /* carousel */
 .carousel {
   position: relative;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+
   /* background-color: var(--color_background); */
   /* background-color: #f6ebe2; */
 }
@@ -170,6 +189,10 @@ nav a {
 .carousel_item {
   color: var(--color_grey);
   /* margin: 0 40px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* .carousel:hover {
@@ -178,9 +201,12 @@ nav a {
 
 .carousel-img {
   flex: 2;
+  width: 100%;
+  height: 100%;
 }
 .carousel-text-wrapper {
   flex: 1;
+  margin-top: 30px;
   /* position: relative; */
   align-items: center;
   padding: 0 30px;
@@ -256,7 +282,8 @@ a {
 }
 
 .caro_container {
-  width: fit-content;
+  width: 100%;
+  margin: auto;
 }
 
 .carousel_title {
@@ -278,7 +305,8 @@ a {
   position: absolute;
   width: 100%;
   text-align: center;
-  bottom: 0px;
+  bottom: -8px;
+  border-radius: 0 0 10px 10px;
   padding: 5px 0;
   background-color: #f6ebe2;
   opacity: 85%;
@@ -286,7 +314,7 @@ a {
 }
 
 .welcome {
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 /* .sections-wrapper {
@@ -353,7 +381,7 @@ a {
 }
 
 .category-thumbnail.one {
-  background-image: url(/images/organic-products/organic-4812597_1280.webp);
+  background-image: url(/images/organic-products/soap-4829708_640.jpg);
 }
 .categories-container :nth-child(2) {
   background-image: url(/images/cycling/bicycle-1838604_640.jpg);

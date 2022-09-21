@@ -1,8 +1,8 @@
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .carousel_item {
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: row; */
+    flex-direction: row;
   }
 
   .carousel-text-wrapper {
@@ -103,7 +103,7 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1300px) {
   main {
     max-width: 1000px;
   }

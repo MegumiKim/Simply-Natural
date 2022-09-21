@@ -32,33 +32,29 @@ async function getFeaturedItem(url) {
 
 getFeaturedItem(topStoryUrl);
 
-async function renderTopStory(post) {
-  const img = createElement();
-}
+// const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/categories/";
+// async function fetchCategories() {
+//   try {
+//     const response = await fetch(url);
+//     const json = await response.json();
 
-const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/categories/";
-async function fetchCategories() {
-  try {
-    const response = await fetch(url);
-    const json = await response.json();
+//     json.forEach((category) => {
+//       const name = createElement("h3", "category-name", category.name);
+//       const id = category.id;
+//       const categoryThumbnail = createElement(
+//         "a",
+//         "category-thumbnail",
+//         undefined,
+//         [name]
+//       );
+//       categoryThumbnail.href = "/html/listOfPosts.html?category=" + id;
 
-    json.forEach((category) => {
-      const name = createElement("h3", "category-name", category.name);
-      const id = category.id;
-      const categoryThumbnail = createElement(
-        "a",
-        "category-thumbnail",
-        undefined,
-        [name]
-      );
-      categoryThumbnail.href = "/html/listOfPosts.html?category=" + id;
-
-      categoriesContainer.append(categoryThumbnail);
-    });
-  } catch (e) {
-    categoriesContainer.innerHTML = userAlert("error", "Failed to fetch data");
-  }
-}
+//       categoriesContainer.append(categoryThumbnail);
+//     });
+//   } catch (e) {
+//     categoriesContainer.innerHTML = userAlert("error", "Failed to fetch data");
+//   }
+// }
 
 // fetchCategories();
 

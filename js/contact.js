@@ -17,7 +17,7 @@ form.onsubmit = async function (event) {
       // },
       body: new FormData(form),
     });
-    console.log(response);
+    // console.log(response);
     userFeedback.innerHTML = userAlert("success", "Thank you for your message");
     form.reset();
   } else {

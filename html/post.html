@@ -62,11 +62,38 @@
       </div>
   
    <section class="comments">
-    <form action="" method="POST" id="comment-form">
+     <!-- <form action="" method="POST" id="comment-form">
+      <label for="user-name">Your Name</label>
+      <input type="text" id='your-name' name="author"></input>
       <label for="comment">comment</label>
-      <textarea type="text" id='comment' name="comment"></textarea>
-      <input type="submit" value="post a comment"/>
-    </form></section>
+      <textarea type="text" id='comment' name="content"></textarea>
+      <input type="submit" value="post a comment"/> -->
+<div id="user-feedback"></div>
+      <form id="comment-form">
+        <input type="hidden" id="52" value=52 />
+        <div>
+          <label htmlFor="name">Name*</label>
+          <input id="name" type="text"  />
+        </div>
+        <div>
+          <label htmlFor="email">Email*</label>
+          <input
+            id="email"
+            type="email"
+            
+          />
+        </div>
+        <div>
+          <label htmlFor="comment">Comment*</label>
+          <textarea name="" id="comment" cols="20" rows="10" ></textarea>
+          <!-- <textarea
+            id="comment"
+            
+          /> -->
+        </div>
+        <input type="submit" value="Post comment!" />
+      </form>
+  </section>
    <section class="related_posts">
     <h2>Related Posts</h2>
     <div class="related-posts-container"></div>
