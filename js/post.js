@@ -1,6 +1,7 @@
 import { createElement } from "./createHTMLelements/createElement.js";
 import { formatDate } from "./createHTMLelements/formatDate.js";
 import { renderThumbnails } from "./createHTMLelements/renderThumbnail.js";
+import { sendForm } from "./form/sendForm.js";
 import { modalFunc } from "./modal.js";
 import { userAlert } from "./userAlert.js";
 const queryString = document.location.search;
@@ -111,12 +112,18 @@ async function renderRelatedPosts(url, relatedContainer, excludeID) {
 // renderRelatedPosts(url, relatedContainer, id);
 
 const form = document.querySelector("#comment-form");
-const userFeedback = document.querySelector("#user-feedback");
-form.onSubmit = async function handleSubmit(event) {
-  event.preventDefault();
-  console.log(event);
+const userFeedback = document.querySelector(".user-feedback");
 
-  const [postId, name, email, comment] = event.target.elements;
+form.addEventListener("submit", postComment);
+
+async function postComment(event) {
+  event.preventDefault();
+  const form = event.target;
+
+  const postId = document.querySelector("#postId");
+  const name = document.querySelector("#name");
+  const email = document.querySelector("#email");
+  const comment = document.querySelector("#comment");
 
   const data = JSON.stringify({
     post: postId.value,
@@ -125,49 +132,11 @@ form.onSubmit = async function handleSubmit(event) {
     content: comment.value,
   });
 
-  const ACTION_URL =
-    "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments/";
-  const response = await fetch(ACTION_URL, {
+  console.log(data);
+  const response = await fetch(form.action, {
     method: form.method,
-    // headers: {
-    //   "Content-Type": "application/json",
-    // },
     body: data,
-    // body: new FormData(form),
-  })
-    .then((response) => {
-      console.log(response);
-      if (response.ok === true) {
-        userFeedback.innerHTML = userAlert(
-          "success",
-          "Thank you for your message"
-        );
-        form.reset();
-        // Submitted successfully!
-      }
-
-      return response.json();
-    })
-    .then((object) => {
-      userFeedback.innerHTML = userAlert("error", "it didn't go");
-    })
-    .catch((error) => console.error("Error:", error));
-};
-// form.onsubmit = async function postForm(event) {
-//   event.preventDefault();
-//   // const proxy = "https://noroffcors.herokuapp.com/";
-//   const url =
-//     "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=52";
-//   try {
-//     const response = await fetch(url, {
-//       method: form.method,
-//       body: new FormData(form),
-//     });
-//     console.log(response);
-
-//     form.innerHTML = userAlert("success", "Thank you");
-//     console.log(response);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
+  });
+  userFeedback.innerHTML = userAlert("success", "Thank you for your message");
+  form.reset();
+}

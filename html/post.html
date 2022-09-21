@@ -68,28 +68,24 @@
       <label for="comment">comment</label>
       <textarea type="text" id='comment' name="content"></textarea>
       <input type="submit" value="post a comment"/> -->
-<div id="user-feedback"></div>
-      <form id="comment-form">
+<div class="user-feedback"></div>
+      <!-- <form id="comment-form" method="post" > -->
+      <form id="comment-form" method="POST" action="https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=52">
         <input type="hidden" id="postId" value=52 />
         <div>
           <label htmlFor="name">Name*</label>
-          <input id="name" type="text"  />
+          <input id="name" type="text" />
         </div>
         <div>
           <label htmlFor="email">Email*</label>
           <input
             id="email"
             type="email"
-            
           />
         </div>
         <div>
           <label htmlFor="comment">Comment*</label>
           <textarea name="" id="comment" cols="20" rows="10" ></textarea>
-          <!-- <textarea
-            id="comment"
-            
-          /> -->
         </div>
         <input type="submit" value="Post comment!" />
       </form>

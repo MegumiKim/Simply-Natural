@@ -28,11 +28,14 @@ forward.onclick = function () {
 
 const backButton = document.querySelector(".back");
 backButton.onclick = function () {
-  if (index === 0) {
-    backButton.style.display = "none";
+  if (index > 0) {
+    dots[index].classList.remove("carousel-dot_selected");
+    index = (index - 1) % 5;
+    carousel();
+    dots[index].classList.add("carousel-dot_selected");
   } else {
     dots[index].classList.remove("carousel-dot_selected");
-    index = Math.abs((index - 1) % 5);
+    index = 4;
     carousel();
     dots[index].classList.add("carousel-dot_selected");
   }
