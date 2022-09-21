@@ -126,14 +126,14 @@ form.onSubmit = async function handleSubmit(event) {
   });
 
   const ACTION_URL =
-    "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments/?post=52";
+    "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments/";
   const response = await fetch(ACTION_URL, {
     method: form.method,
     // headers: {
     //   "Content-Type": "application/json",
     // },
-    // body: data,
-    body: new FormData(form),
+    body: data,
+    // body: new FormData(form),
   })
     .then((response) => {
       console.log(response);
