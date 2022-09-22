@@ -5,7 +5,9 @@ const nameError = document.querySelector(".name-error");
 const subjectError = document.querySelector(".subject-error");
 const emailError = document.querySelector(".email-error");
 const messageError = document.querySelector(".message-error");
+const commentError = document.querySelector(".comment-error");
 const email = document.querySelector("#email");
+const comment = document.querySelector("#comment");
 
 export function validateContactForm() {
   if (
@@ -13,6 +15,15 @@ export function validateContactForm() {
     checkInputLength(subject, 5, subjectError) &&
     validateEmail(email) &&
     checkInputLength(message, 5, messageError)
+  ) {
+    return true;
+  }
+}
+
+export function validateCommentForm() {
+  if (
+    checkInputLength(userName, 2, nameError) &&
+    checkInputLength(comment, 2, commentError)
   ) {
     return true;
   }

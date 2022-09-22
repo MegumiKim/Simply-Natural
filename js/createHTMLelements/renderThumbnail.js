@@ -1,10 +1,10 @@
 import { createThumbnail } from "./createThumbnail.js";
-import { fetchPosts } from "../form/API/fetchPosts.js";
 import { userAlert } from "../userAlert.js";
+import { fetchAPI } from "../fetchAPI.js";
 
 export async function renderThumbnails(url, container) {
   container.innerHTML = "";
-  const fetchedPost = await fetchPosts(url);
+  const fetchedPost = await fetchAPI(url);
 
   if (fetchedPost.length) {
     fetchedPost.forEach(async function (post) {

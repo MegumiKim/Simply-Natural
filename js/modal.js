@@ -4,6 +4,7 @@ const modalContainer = document.querySelector(".modal-container");
 export async function modalFunc(figures) {
   figures.forEach(function (figure) {
     figure.onclick = function () {
+      console.log(figure);
       const modalImage = figure.lastElementChild.src;
       modalContainer.src = modalImage;
       toggleModal();

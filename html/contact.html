@@ -59,67 +59,68 @@
         </div>
       </div>
     </header>
-    <main>
-      <div class="about-img one">
-        <img
-          src="../images/organic-products/natural-cosmetics-3397277_640.webp"
-          alt="portrait of Anna, the author of the blog"
-        />
-      </div>
+    <main class="contact-main">
       <h1>Contact</h1>
-      <form
-        id="contact-form"
-        method="POST"
-        action="https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback"
-      >
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="your-name"
-          class="form__input"
-          placeholder=" min 5 letters "
-          required
-        />
-        <div class="form-error name-error"></div>
-        <label for="subject">Subject</label>
-        <input
-          type="text"
-          id="subject"
-          name="your-subject"
-          class="form__input"
-          placeholder=" min 15 letters"
-          required
-        />
-        <div class="form-error subject-error"></div>
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="your-email"
-          class="form__input"
-          placeholder=" example@email.com"
-          required
-        />
-        <div class="form-error email-error"></div>
+      <div class="contact-div">
+        <form
+          id="contact-form"
+          method="POST"
+          action="https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback"
+        >
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="your-name"
+            class="form__input"
+            placeholder=" min 5 letters "
+            required
+          />
+          <div class="form-error name-error"></div>
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="your-subject"
+            class="form__input"
+            placeholder=" min 15 letters"
+            required
+          />
+          <div class="form-error subject-error"></div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="your-email"
+            class="form__input"
+            placeholder=" example@email.com"
+            required
+          />
+          <div class="form-error email-error"></div>
 
-        <label for="texts">Message</label>
-        <textarea
-          name="message"
-          id="message"
-          name="your-message"
-          class="form__input"
-          placeholder="min 25 letters"
-          required
-        ></textarea>
-        <div class="form-error message-error"></div>
-        <input type="checkbox" id="sign-up" name="sign-up" class="checkbox" />
-        <label for="sign-up">Sign-up for news letter</label>
-
-        <div class="user-feedback"></div>
-        <input type="submit" value="Send" name="Submit" class="cta form" />
-      </form>
-      <div class="form-container"></div>
+          <label for="texts">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            name="your-message"
+            class="form__input"
+            placeholder="min 25 letters"
+            required
+          ></textarea>
+          <div class="form-error message-error"></div>
+          <input type="checkbox" id="sign-up" name="sign-up" class="checkbox" />
+          <label for="sign-up">Sign-up for news letter</label>
+          <div class="user-feedback"></div>
+          <input type="submit" value="Send" name="Submit" class="cta" />
+        </form>
+        <div class="contact-img">
+          <img
+            class="contact-img"
+            src="../images/others/florian-klauer-mk7D-4UCfmg-unsplash(1).webp"
+            alt="a typewriter"
+          />
+        </div>
+      </div>
     </main>
     <footer>
       <div class="copyright">Simply Natural &copy</div>

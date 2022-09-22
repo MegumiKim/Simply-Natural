@@ -62,33 +62,24 @@
       </div>
   
    <section class="comments">
-     <!-- <form action="" method="POST" id="comment-form">
-      <label for="user-name">Your Name</label>
-      <input type="text" id='your-name' name="author"></input>
-      <label for="comment">comment</label>
-      <textarea type="text" id='comment' name="content"></textarea>
-      <input type="submit" value="post a comment"/> -->
-<div class="user-feedback"></div>
-      <!-- <form id="comment-form" method="post" > -->
-      <form id="comment-form" method="POST" action="https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments?post=52">
-        <input type="hidden" id="postId" value=52 />
+    <h2>Comments</h2>
+    <h3>Leave a comment</h3>
+      <form id="comment-form" method="POST" action="https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/comments">
         <div>
-          <label htmlFor="name">Name*</label>
-          <input id="name" type="text" />
+          <label for="name">Name</label>
+          <input name = 'name' class='form__input' id="name" type="text" />
+          <div class="form-error name-error"></div>
         </div>
         <div>
-          <label htmlFor="email">Email*</label>
-          <input
-            id="email"
-            type="email"
-          />
-        </div>
         <div>
-          <label htmlFor="comment">Comment*</label>
-          <textarea name="" id="comment" cols="20" rows="10" ></textarea>
+          <label for="comment">Comment</label>
+          <textarea name="comment" class='form__input' id="comment" ></textarea>
+          <div class="form-error comment-error"></div>
         </div>
-        <input type="submit" value="Post comment!" />
+        <input class='cta' name='submit' type="submit" value="Post" />
       </form>
+      <div class="user-feedback"></div>
+      <div class="previous-comments"></div>
   </section>
    <section class="related_posts">
     <h2>Related Posts</h2>
