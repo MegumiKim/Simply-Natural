@@ -37,7 +37,7 @@
   }
   .main-search {
     width: 100%;
-    padding: 0;
+    margin: 0 auto;
   }
 
   .main-full {
@@ -95,7 +95,7 @@
   }
 
   section {
-    padding: 8%;
+    padding: 5%;
   }
 
   h2 {
@@ -116,7 +116,6 @@
 
   .comments {
     max-width: 500px;
-    padding: 0;
   }
 }
 
@@ -125,6 +124,13 @@
     max-width: 1000px;
   }
 
+  .main-search {
+    max-width: 100%;
+  }
+  .caro_container {
+    height: 70vh;
+    overflow: clip;
+  }
   .carousel_title {
     font-size: 5rem;
     margin: auto;

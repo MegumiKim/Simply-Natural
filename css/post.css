@@ -9,13 +9,14 @@ h1,
   font-size: 0.8em;
 }
 
-.wp-block-post-terms {
+/* .wp-block-post-terms {
   margin-bottom: 80px;
-}
+} */
 figure {
   max-width: 500px;
   cursor: pointer;
   height: auto;
+  margin: 30px auto;
 }
 
 .content {

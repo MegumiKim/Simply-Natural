@@ -1,5 +1,6 @@
 import { createCarouselItem } from "./createHTMLelements/createCarouselItem.js";
 import { fetchAPI } from "./fetchAPI.js";
+import { userAlert } from "./userAlert.js";
 
 const url =
   "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed&per_page=5";
@@ -9,25 +10,35 @@ const dots = document.querySelectorAll(".dot");
 
 let index = 0;
 export async function carousel() {
-  container.innerHTML = "";
-  const post = await fetchedPosts[index];
-  // console.log(post);
-  const html = await createCarouselItem(post);
+  try {
+    container.innerHTML = "";
+    const post = await fetchedPosts[index];
+    const html = await createCarouselItem(post);
 
-  container.append(html);
+    container.append(html);
+  } catch (e) {
+    console.log(e);
+    container.innerHTML = userAlert(
+      "error",
+      "an error occurred while fetching data"
+    );
+  }
 }
 
 const forward = document.querySelector(".forward");
-forward.onclick = function () {
+const backButton = document.querySelector(".back");
+
+forward.onclick = showNextSlide;
+backButton.onclick = showPreviousSlide;
+
+function showNextSlide() {
   dots[index].classList.remove("carousel-dot_selected");
-  backButton.style.display = "block";
   index = (index + 1) % 5;
   dots[index].classList.add("carousel-dot_selected");
   carousel();
-};
+}
 
-const backButton = document.querySelector(".back");
-backButton.onclick = function () {
+function showPreviousSlide() {
   if (index > 0) {
     dots[index].classList.remove("carousel-dot_selected");
     index = (index - 1) % 5;
@@ -39,4 +50,4 @@ backButton.onclick = function () {
     carousel();
     dots[index].classList.add("carousel-dot_selected");
   }
-};
+}

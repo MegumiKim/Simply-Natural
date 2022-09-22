@@ -38,11 +38,11 @@ fieldset {
 }
 
 textarea {
-  height: 200px;
+  height: 100px;
 }
 
 .contact-img {
-  overflow-y: hidden;
+  border-radius: 30px;
 }
 
 .contact-main h1 {
