@@ -240,6 +240,7 @@ a {
   flex: 1;
 }
 .carousel-nav {
+  display: none;
   margin-top: 10px;
   text-align: center;
 }

@@ -35,6 +35,7 @@ export function showNextSlide() {
 }
 
 export function showPreviousSlide() {
+  const dots = document.querySelectorAll(".dot");
   if (index > 0) {
     dots[index].classList.remove("carousel-dot_selected");
     index = (index - 1) % 5;
