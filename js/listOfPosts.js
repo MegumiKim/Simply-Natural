@@ -1,18 +1,22 @@
 import { renderThumbnails } from "./createHTMLelements/renderThumbnail.js";
+import { renderTitle } from "./createHTMLelements/renderTitle.js";
 const container = document.querySelector(".list-of-post_container");
 
 // const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed";
 const url =
   "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term";
-
 const categorySelector = document.querySelector("#category-selector");
+const h2 = document.querySelector("h2");
 
 categorySelector.onchange = async function (event) {
-  const selectedCategory = event.target.value;
-  if (selectedCategory) {
-    const newUrl = url + "&categories=" + selectedCategory;
+  const id = event.target.value;
+  if (id) {
+    const newUrl = url + "&categories=" + id;
+    const categoryUrl = `https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/categories/${id}`;
+    h2.innerHTML = await renderTitle(categoryUrl);
     renderThumbnails(newUrl, container);
   } else {
+    h2.innerHTML = "All Categories";
     renderThumbnails(url, container);
   }
 };

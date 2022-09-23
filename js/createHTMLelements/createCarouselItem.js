@@ -1,5 +1,5 @@
 import { createElement } from "./createElement.js";
-
+import { showNextSlide, showPreviousSlide } from "../carousel.js";
 import { formatDate } from "./formatDate.js";
 
 export async function createCarouselItem(post) {
@@ -28,7 +28,6 @@ export async function createCarouselItem(post) {
       "category-carousel",
       category.name
     );
-    console.log(category.name);
     categoriesContainer.append(postCategory);
   });
   const wrapper = createElement("div", "carousel-text-wrapper", undefined, [
@@ -40,14 +39,17 @@ export async function createCarouselItem(post) {
 
   // const dot = createElement("div", "dot", undefined);
   // const carouselNav = createElement("div", "carousel-nav", undefined, [dot]);
-  // const rightArrow = createElement("button", "arrow", "&#10095;");
-  // rightArrow.classList.add("forward");
-
-  // const leftArrow = createElement("button", "arrow", "&#10094;");
-  // leftArrow.classList.add("back");
+  const rightArrow = createElement("button", "arrow", "&#10095;");
+  rightArrow.classList.add("forward");
+  const leftArrow = createElement("button", "arrow", "&#10094;");
+  leftArrow.classList.add("back");
+  rightArrow.onclick = showNextSlide;
+  leftArrow.onclick = showPreviousSlide;
   const element = await createElement("div", "carousel_item", undefined, [
     img,
     wrapper,
+    rightArrow,
+    leftArrow,
   ]);
   return element;
 }

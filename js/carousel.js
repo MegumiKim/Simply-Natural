@@ -28,17 +28,14 @@ export async function carousel() {
 const forward = document.querySelector(".forward");
 const backButton = document.querySelector(".back");
 
-forward.onclick = showNextSlide;
-backButton.onclick = showPreviousSlide;
-
-function showNextSlide() {
+export function showNextSlide() {
   dots[index].classList.remove("carousel-dot_selected");
   index = (index + 1) % 5;
   dots[index].classList.add("carousel-dot_selected");
   carousel();
 }
 
-function showPreviousSlide() {
+export function showPreviousSlide() {
   if (index > 0) {
     dots[index].classList.remove("carousel-dot_selected");
     index = (index - 1) % 5;
