@@ -11,12 +11,14 @@ const comment = document.querySelector("#comment");
 
 export function validateContactForm() {
   if (
-    checkInputLength(userName, 2, nameError) &&
-    checkInputLength(subject, 5, subjectError) &&
+    checkInputLength(userName, 5, nameError) &&
+    checkInputLength(subject, 15, subjectError) &&
     validateEmail(email) &&
-    checkInputLength(message, 5, messageError)
+    checkInputLength(message, 25, messageError)
   ) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -30,7 +32,7 @@ export function validateCommentForm() {
 }
 
 function checkInputLength(inputField, len, errorField) {
-  // console.log(inputField.value);
+  console.log(inputField.value);
   if (inputField.value.trim().length >= len) {
     errorField.innerHTML = "";
     return true;

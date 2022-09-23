@@ -9,7 +9,6 @@ export async function sendForm(event, body) {
   if (validateContactForm()) {
     const response = await fetch(form.action, {
       method: form.method,
-      // headers: headers,
       body: new FormData(form),
     });
     userFeedback.innerHTML = userAlert("success", "Thank you for your message");
