@@ -6,7 +6,9 @@ import { fetchAPI } from "./fetchAPI.js";
 const featuredOne = document.querySelector(".featured-one-container");
 const featuredTwo = document.querySelector(".featured-two-container");
 const baseURL = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts";
+// const hamburgerMenu = document.querySelector(".nav-button");
 
+// hamburgerMenu.onclick = closeNav;
 carousel();
 
 // rendering trending topics

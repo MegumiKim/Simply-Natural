@@ -4,6 +4,7 @@ import { userAlert } from "../userAlert.js";
 import { fetchAPI } from "../fetchAPI.js";
 
 export async function renderPost(url, container) {
+  container.innerHTML = "";
   try {
     const post = await fetchAPI(url);
     const title = document.querySelector("title");

@@ -53,7 +53,7 @@
   }
 
   .nav-wrap {
-    display: block;
+    /* display: block; */
     min-width: 300px;
     order: -1;
   }
