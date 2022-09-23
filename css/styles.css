@@ -80,6 +80,7 @@ p {
 main {
   padding: 0 8%;
   margin: 0 auto;
+  max-width: 100vw;
 }
 
 .main-full {
@@ -456,6 +457,7 @@ a {
   justify-content: flex-end;
   margin: 10px 40px 20px 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .category-carousel {
