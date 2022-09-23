@@ -14,10 +14,13 @@
 
 h2 {
   font-size: 1.5em;
+  text-decoration: underline;
+  /* text-transform: uppercase; */
+  /* font-style: italic; */
 }
-.thumbnail:hover {
+/* .thumbnail:hover {
   background-color: var(--color_beige);
-}
+} */
 .img-wrapper {
   max-width: 200px;
   margin: 10px;

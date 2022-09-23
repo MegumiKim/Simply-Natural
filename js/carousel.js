@@ -5,8 +5,7 @@ import { userAlert } from "./userAlert.js";
 const url =
   "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed&per_page=5";
 const fetchedPosts = await fetchAPI(url);
-const container = document.querySelector(".caro_container");
-const dots = document.querySelectorAll(".dot");
+const container = document.querySelector(".carousel");
 
 let index = 0;
 export async function carousel() {
@@ -14,7 +13,6 @@ export async function carousel() {
     container.innerHTML = "";
     const post = await fetchedPosts[index];
     const html = await createCarouselItem(post);
-
     container.append(html);
   } catch (e) {
     console.log(e);
@@ -25,10 +23,11 @@ export async function carousel() {
   }
 }
 
-const forward = document.querySelector(".forward");
-const backButton = document.querySelector(".back");
+// const forward = document.querySelector(".forward");
+// const backButton = document.querySelector(".back");
 
 export function showNextSlide() {
+  const dots = document.querySelectorAll(".dot");
   dots[index].classList.remove("carousel-dot_selected");
   index = (index + 1) % 5;
   dots[index].classList.add("carousel-dot_selected");

@@ -4,7 +4,7 @@ const container = document.querySelector(".list-of-post_container");
 
 // const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed";
 const url =
-  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term";
+  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_fields=id,date,title,_links,&_embed=wp:featuredmedia,wp:term";
 const categorySelector = document.querySelector("#category-selector");
 const h2 = document.querySelector("h2");
 
@@ -40,7 +40,8 @@ sortByCategory();
 const viewMore = document.querySelector(".view-more");
 
 viewMore.onclick = function () {
-  const newUrl = url + "&?per_page=20";
+  const newUrl = url + "&per_page=20";
   renderThumbnails(newUrl, container);
+  console.log(newUrl);
   viewMore.style.display = "none";
 };

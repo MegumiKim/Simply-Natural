@@ -10,9 +10,9 @@ export async function renderRelatedPosts(url, relatedContainer, excludeID) {
   const relatedPostUrl =
     "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts/?per_page=2" +
     argument +
-    "&category=" +
+    "&categories=" +
     categoryID +
     `&exclude=${excludeID}`;
-
+  console.log(relatedPostUrl);
   renderThumbnails(relatedPostUrl, relatedContainer);
 }
