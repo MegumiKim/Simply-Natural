@@ -5,6 +5,9 @@
     flex-direction: row;
   }
 
+  .arrow {
+    top: 50%;
+  }
   .carousel-text-wrapper {
     padding: 0 40px;
     padding-right: 60px;

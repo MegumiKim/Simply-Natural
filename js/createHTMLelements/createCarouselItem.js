@@ -36,8 +36,6 @@ export async function createCarouselItem(post) {
     const imgWrapper = createElement("div", "img-wrapper", undefined, [
       nav,
       img,
-      rightArrow,
-      leftArrow,
     ]);
 
     const linkUrl = `/html/post.html?id=${post.id}`;
@@ -67,6 +65,8 @@ export async function createCarouselItem(post) {
     const element = await createElement("div", "carousel_item", undefined, [
       imgWrapper,
       textWrapper,
+      rightArrow,
+      leftArrow,
     ]);
 
     return element;
