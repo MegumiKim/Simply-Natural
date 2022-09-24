@@ -93,7 +93,7 @@ h2 {
   font-family: "Libre Caslon Display";
 } */
 .cta {
-  font-size: 1em;
+  font-size: 0.8em;
   text-transform: uppercase;
   display: block;
   width: fit-content;
@@ -103,7 +103,7 @@ h2 {
   background-color: #fff;
   padding: 10px 30px;
   margin: 5% auto;
-  /* border: none; */
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -154,7 +154,7 @@ footer {
 nav {
   display: none;
   z-index: 1;
-  background-color: var(--color_beige);
+  background-color: var(--color_light-green);
   padding: 20px 20px;
   height: 200px;
   justify-content: space-around;

@@ -99,14 +99,14 @@ p {
 }
 
 .user-comment {
-  border: 1px lightgray solid;
+  border: 2px solid var(--color_light-green);
   text-align: left;
   margin: 10px auto 30px auto;
   padding: 20px 40px;
-  /* border-radius: 40px; */
   display: flex;
   gap: 20px;
   max-width: 600px;
+  border-radius: 3px;
 }
 
 .user-comment p {
@@ -131,6 +131,6 @@ p {
 }
 
 .comment-meta {
-  border-right: 1px solid grey;
+  border-right: 1px solid var(--color_light-green);
   padding-right: 20px;
 }
