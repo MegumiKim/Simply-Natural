@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   padding: 20px 30px;
-  border: 1px solid var(--color_beige);
+  /* border: 1px solid var(--color_beige); */
+  border: 1px solid var(--color_light-green);
   text-decoration: none;
   color: var(--color_black);
   gap: 30px;
@@ -32,6 +33,7 @@ h2 {
 }
 .list-of-post_container .thumbnail:hover {
   background-color: var(--color_beige);
+  background-color: var(--color_light-green);
 }
 .img-wrapper {
   max-width: 200px;
@@ -70,14 +72,15 @@ h3 {
 }
 
 select {
-  border: var(--color_beige) 1px solid;
+  border: var(--color_light-green) 1px solid;
   background-color: white;
   padding: 10px;
   cursor: pointer;
 }
 
 select:hover {
-  background-color: var(--color_beige);
+  /* background-color: var(--color_beige); */
+  background-color: var(--color_light-green);
 }
 
 /* search */

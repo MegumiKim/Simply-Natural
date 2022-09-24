@@ -28,32 +28,12 @@ form {
   padding: 10px;
 }
 
-.checkbox {
-  margin-bottom: 20px;
-}
-
-fieldset {
-  margin-bottom: 10px;
-  border: none;
-}
-
-textarea {
-  height: 100px;
-}
-
 .contact-img {
   border-radius: 30px;
 }
 
 .contact-main h1 {
   margin: 5% auto;
-}
-
-label {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  display: inline-block;
-  font-weight: bold;
 }
 
 form p {

@@ -13,9 +13,8 @@ html,
 body {
   height: 100%;
   width: 100%;
-  /* line-height: 2; */
-  color: var(--color_black);
-  /* background-color: var(--color_background); */
+  /* color: var(--color_black); */
+  color: var(--color_grey);
   font-size: 18px;
   font-family: "Barlow", Cambria, Cochin, Georgia, serif;
   margin: 0 auto;
@@ -94,22 +93,23 @@ h2 {
   font-family: "Libre Caslon Display";
 } */
 .cta {
+  font-size: 1em;
   text-transform: uppercase;
   display: block;
   width: fit-content;
   text-decoration: none;
-  color: var(--color_black);
-  background-color: #d99c9c;
+  color: var(--color_grey);
+  border: var(--color_beige) 3px solid;
+  background-color: #fff;
   padding: 10px 30px;
   margin: 5% auto;
-  border: none;
+  /* border: none; */
   cursor: pointer;
 }
 
 .cta:hover,
-.wpcf7-submit,
 #submit:hover {
-  background-color: #a77272;
+  background-color: var(--color_beige);
 }
 
 ul {
@@ -124,6 +124,7 @@ li {
   font-family: "Oooh Baby", cursive, serif;
   text-decoration: none;
   font-size: 2em;
+  font-weight: bold;
   /* color: black; */
 }
 
@@ -361,7 +362,9 @@ a {
 
 .featured-one,
 .featured-categories {
-  background-color: var(--color_beige);
+  color: #5b524d;
+  background-color: #d4e2d5;
+  /* background-color: var(--color_beige); */
 }
 
 .featured-one-container .thumbnail {

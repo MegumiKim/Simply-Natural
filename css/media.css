@@ -134,6 +134,10 @@
   .featured-one-container {
     flex-wrap: nowrap;
   }
+
+  .related-posts-container {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1300px) {
