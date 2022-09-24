@@ -17,12 +17,12 @@
     bottom: 0px;
   }
 
-  .forward {
+  /* .forward {
     margin-right: 15px;
   }
   .back {
     margin-left: 15px;
-  }
+  } */
   .read-button {
     position: static;
   }

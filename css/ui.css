@@ -22,10 +22,9 @@
 .error {
   color: darkred;
   border: darkred 2px solid;
-  /* background: rgb(248, 231, 231); */
 }
 .success {
-  color: darkgreen;
+  color: var(color-green);
   border: green solid 2px;
   /* background: rgb(222, 248, 222); */
 }
@@ -40,8 +39,9 @@
 .fa-spinner {
   margin: 100px auto;
   font-size: 5em;
-  color: var(--color_beige);
+  color: var(--color_light-green);
   animation: spin 3s linear infinite;
+  text-align: center;
 }
 
 @keyframes spin {

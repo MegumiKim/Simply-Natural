@@ -42,6 +42,7 @@ h3,
 h1,
 .carousel_title {
   font-size: 3em;
+  text-align: left;
 }
 
 h2 {
@@ -105,6 +106,7 @@ h2 {
   margin: 5% auto;
   border-radius: 3px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .cta:hover,
@@ -230,7 +232,7 @@ nav a {
 
 .carousel_item {
   color: var(--color_grey);
-  /* margin: 0 40px; */
+  text-align: left;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -281,8 +283,7 @@ a {
 }
 
 .arrow {
-  /* display: none; */
-  /* bottom: 50%; */
+  display: none;
   top: 30%;
   color: var(--color_grey);
   position: absolute;
@@ -291,6 +292,7 @@ a {
   border: none;
   font-size: 1em;
   opacity: 80%;
+  margin: 0 15px;
 }
 
 .forward {
@@ -306,7 +308,7 @@ a {
 .dot {
   height: 10px;
   width: 10px;
-  background-color: var(--color_beige);
+  background-color: var(--color_light-green);
   border-radius: 50%;
   display: inline-block;
   margin: 3px;
@@ -320,7 +322,6 @@ a {
 
 /* about */
 
-.about-frame,
 .about-img {
   max-width: 600px;
   margin: 30px auto;
@@ -329,20 +330,7 @@ a {
 .about-frame h1 {
   margin: 5% auto;
 }
-/* .caro_container {
-  width: 100%;
-  margin: auto;
-} */
 
-.carousel_title {
-  margin-bottom: 0;
-  cursor: pointer;
-  font-size: 2.5em;
-}
-
-.carousel_title:hover {
-  text-decoration: underline;
-}
 .category {
   font-style: italic;
   text-align: end;
@@ -365,7 +353,7 @@ a {
 .featured-categories {
   color: #5b524d;
   background-color: #d4e2d5;
-  /* background-color: var(--color_beige); */
+  /* background-color: var(--color_light-green); */
 }
 
 .featured-one-container .thumbnail {
@@ -430,7 +418,7 @@ a {
   padding: 15%;
 }
 .thumbnail_title {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .thumbnail_title:hover {
@@ -456,6 +444,21 @@ a {
 
 .categories-container :nth-child(5) {
   background-image: url(/images/travel/yoga-2176668_640.webp);
+}
+
+.caro_container {
+  text-align: center;
+}
+
+.carousel_title {
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.carousel_title:hover {
+  text-decoration: underline;
 }
 
 .categories-carousel-container {

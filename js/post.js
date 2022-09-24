@@ -10,7 +10,7 @@ const fieldsPram =
   "?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term";
 const url = baseURL + fieldsPram;
 
-const postContainer = document.querySelector(".container");
+const postContainer = document.querySelector(".blog-container");
 const commentsContainer = document.querySelector(".previous-comments");
 const relatedContainer = document.querySelector(".related-posts-container");
 const commentForm = document.querySelector("#comment-form");
