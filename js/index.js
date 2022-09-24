@@ -6,15 +6,14 @@ import { fetchAPI } from "./fetchAPI.js";
 const featuredOne = document.querySelector(".featured-one-container");
 const featuredTwo = document.querySelector(".featured-two-container");
 const baseURL = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts";
-// const hamburgerMenu = document.querySelector(".nav-button");
 
-// hamburgerMenu.onclick = closeNav;
 carousel();
 
 // rendering trending topics
-const featuredCategoryUrl =
-  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term&categories=3";
-
+const featuredParam =
+  "?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term&categories=";
+const featuredCategoryID = "3";
+const featuredCategoryUrl = baseURL + featuredParam + featuredCategoryID;
 renderThumbnails(featuredCategoryUrl, featuredOne);
 
 // rendering top story

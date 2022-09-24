@@ -5,7 +5,8 @@ import { userAlert } from "./userAlert.js";
 const url =
   "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed&per_page=5";
 const fetchedPosts = await fetchAPI(url);
-const container = document.querySelector(".carousel");
+const container = document.querySelector(".caro_container");
+// const container = document.querySelector(".carousel");
 
 let index = 0;
 export async function carousel() {
@@ -23,6 +24,11 @@ export async function carousel() {
   }
 }
 
+const forward = document.querySelector(".forward");
+const backButton = document.querySelector(".back");
+
+forward.onclick = showNextSlide;
+backButton.onclick = showPreviousSlide;
 // const forward = document.querySelector(".forward");
 // const backButton = document.querySelector(".back");
 

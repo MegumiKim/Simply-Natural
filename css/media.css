@@ -43,6 +43,10 @@
   .main-full {
     max-width: none;
   }
+  .main-posts {
+    padding: auto;
+    max-width: 800px;
+  }
 
   h1 {
     font-size: 4rem;
@@ -100,6 +104,10 @@
   h2 {
     font-size: 2.5em;
     margin: 0 auto 5% auto;
+  }
+
+  .h2-category {
+    font-size: 1.5em;
   }
   .contact-div {
     display: flex;
