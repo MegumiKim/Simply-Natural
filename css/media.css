@@ -20,15 +20,6 @@
     bottom: 0px;
   }
 
-  /* .forward {
-    margin-right: 15px;
-  }
-  .back {
-    margin-left: 15px;
-  } */
-  .read-button {
-    position: static;
-  }
   body {
     font-size: 21px;
   }
@@ -79,10 +70,18 @@
     display: none;
   }
 
+  .list-of-post_container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+  }
   .thumbnail {
-    flex-direction: row;
+    /* flex-direction: row; */
     /* height: 120px; */
-    margin: 20px auto;
+    margin: 10px auto;
+  }
+
+  .thumbnail-text-wrapper {
+    width: 100%;
   }
 
   .featured-one-container,
@@ -95,7 +94,10 @@
   .featured-two {
     padding: 5% 0;
   }
-
+  .about-frame {
+    max-width: 600px;
+    margin: auto;
+  }
   .about-frame h2 {
     margin: 10% auto;
   }
