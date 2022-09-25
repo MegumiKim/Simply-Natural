@@ -12,7 +12,9 @@ export async function createCarouselItem(post) {
       undefined,
       post._embedded["wp:featuredmedia"][0].source_url
     );
-    const imgWrapper = createElement("div", "img-wrapper", undefined, [img]);
+    const imgWrapper = createElement("div", "carousel-img-wrapper", undefined, [
+      img,
+    ]);
 
     const linkUrl = `/html/post.html?id=${post.id}`;
     const categoriesContainer = createElement(

@@ -120,6 +120,10 @@ p {
   display: none;
 }
 
+.previous-comments {
+  margin-bottom: 20%;
+}
+
 .previous-comments p {
   text-align: center;
 }

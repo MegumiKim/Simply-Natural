@@ -20,9 +20,19 @@ export async function carousel() {
 
 const forward = document.querySelector(".forward");
 const backButton = document.querySelector(".back");
-
+const dots = document.querySelectorAll(".dot");
+const two = document.querySelector(".two");
 forward.onclick = showNextSlide;
 backButton.onclick = showPreviousSlide;
+
+dots.forEach((dot, i) => {
+  dot.onclick = function () {
+    dots[index].classList.remove("carousel-dot_selected");
+    dots[i].classList.add("carousel-dot_selected");
+    index = i;
+    carousel();
+  };
+});
 
 export function showNextSlide() {
   const dots = document.querySelectorAll(".dot");

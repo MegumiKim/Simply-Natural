@@ -13,7 +13,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  /* color: var(--color_black); */
   color: var(--color_grey);
   font-size: 18px;
   font-family: "Barlow", Cambria, Cochin, Georgia, serif;
@@ -244,7 +243,7 @@ nav a {
 } */
 
 .carousel-img {
-  flex: 2;
+  /* flex: 2; */
   /* width: 100%;
   height: 100%; */
 }
@@ -261,13 +260,13 @@ nav a {
 }
 a {
   text-decoration: none;
-  color: var(--color_black);
+  color: var(--color_grey);
 }
 
-.img-wrapper {
+/* .img-wrapper {
   position: relative;
   flex: 1;
-}
+} */
 .carousel-nav {
   /* display: none; */
   margin-top: 10px;
@@ -278,12 +277,12 @@ a {
   display: block;
 } */
 
-.carousel:hover .arrow {
+/* .carousel:hover .arrow {
   display: block;
-}
+} */
 
 .arrow {
-  display: none;
+  /* display: none; */
   top: 30%;
   color: var(--color_grey);
   position: absolute;
@@ -313,6 +312,11 @@ a {
   display: inline-block;
   margin: 3px;
   bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dot:hover {
+  transform: scale(1.5);
 }
 
 .carousel-dot_selected {
@@ -427,6 +431,7 @@ a {
 .featured-two-container .thumbnail_title {
   font-size: 1.3em;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .category-thumbnail.one {

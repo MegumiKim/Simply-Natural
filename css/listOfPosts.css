@@ -1,6 +1,6 @@
 .thumbnail {
   max-width: 800px;
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   padding: 20px 30px;
@@ -30,7 +30,7 @@ h2 {
   background-color: var(--color_light-green);
 }
 .img-wrapper {
-  max-width: 200px;
+  max-width: 300px;
   margin: 10px;
 }
 .thumbnail_date {

@@ -1,12 +1,15 @@
 @media (min-width: 800px) {
   .carousel_item {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: row;
+  }
+  .carousel-img-wrapper {
+    flex: 1.5;
   }
 
   .arrow {
-    top: 50%;
+    top: 40%;
   }
   .carousel-text-wrapper {
     padding: 0 40px;
@@ -126,11 +129,6 @@
     max-width: 500px;
   }
 
-  .img-wrapper {
-    flex: 2;
-    max-height: 70vh;
-    overflow-y: clip;
-  }
   .featured-one-container {
     flex-wrap: nowrap;
   }
@@ -151,10 +149,11 @@
   .main-search {
     max-width: 100%;
   }
-  /* .caro_container {
+  .carousel-img-wrapper {
+    flex: 2;
     height: 70vh;
-    overflow: clip;
-  } */
+    overflow-y: clip;
+  }
   .carousel_title {
     font-size: 5rem;
     margin: auto;
