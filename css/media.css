@@ -117,7 +117,7 @@
   .contact-div {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 50px;
     margin-bottom: 30px;
   }
   .contact-img {

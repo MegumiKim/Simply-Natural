@@ -10,7 +10,7 @@ export async function createCarouselItem(post) {
 
     const imgWrapper = await createImg(post, "carousel");
     const linkUrl = `/html/post.html?id=${post.id}`;
-    const categoriesContainer = createCategory(post, "carousel");
+    const categoriesContainer = await createCategory(post, "carousel");
     const textWrapper = createElement(
       "div",
       "carousel-text-wrapper",
