@@ -65,7 +65,7 @@ p {
   background-color: white;
   padding: 1rem;
   width: 50rem;
-  max-height: 70rem;
+  max-width: 90vw;
 }
 
 .show-modal {

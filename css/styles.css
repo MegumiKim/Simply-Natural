@@ -66,10 +66,10 @@ img {
 }
 /* .img-wrapper:hover { */
 .thumbnail:hover,
-.category-thumbnail:hover {
+.featured-category:hover {
   transform: scale(1.05);
 }
-.category-thumbnail,
+.featured-category,
 .thumbnail {
   transition: transform 0.3s ease-in-out;
 }
@@ -363,12 +363,12 @@ a {
   margin: auto;
   padding: 0 10%;
 }
-.category-thumbnail,
+.featured-category,
 .featured-one-container > .thumbnail {
   width: 300px;
 }
 
-.category-thumbnail {
+.featured-category {
   margin: 20px auto;
   /* border-radius: 10px; */
   /* padding: 10px 20px; */
@@ -417,7 +417,7 @@ a {
   font-weight: bold;
 }
 
-.category-thumbnail.one {
+.featured-category.one {
   background-image: url(/images/organic-products/soap-4829708_640.jpg);
 }
 .categories-container :nth-child(2) {

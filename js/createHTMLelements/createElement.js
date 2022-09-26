@@ -13,7 +13,7 @@ export function createElement(tag, classes, innerHTML, children, src, altText) {
     element.src = src;
   }
   if (altText) {
-    element.altText = altText;
+    element.alt = altText;
   }
 
   return element;

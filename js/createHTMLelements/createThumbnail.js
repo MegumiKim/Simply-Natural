@@ -1,4 +1,6 @@
+import { createCategory } from "./createCategory.js";
 import { createElement } from "./createElement.js";
+import { createImg } from "./createImg.js";
 import { formatDate } from "./formatDate.js";
 
 export async function createThumbnail(post) {
@@ -10,29 +12,8 @@ export async function createThumbnail(post) {
     undefined
   );
 
-  const img = await createElement(
-    "img",
-    "img",
-    undefined,
-    undefined,
-    post._embedded["wp:featuredmedia"][0].source_url,
-    post._embedded["wp:featuredmedia"][0].alt_text
-  );
-  img.width = "640";
-  img.height = "360";
-  const imgWrapper = createElement("div", "img-wrapper", undefined, [img]);
-
-  const categoriesContainer = createElement(
-    "div",
-    "categories-thumbnail-container",
-    undefined,
-    []
-  );
-  const categories = post._embedded["wp:term"][0];
-  categories.forEach(async function (category) {
-    const postCategory = await createElement("div", "category", category.name);
-    categoriesContainer.append(postCategory);
-  });
+  const imgWrapper = await createImg(post, "thumbnail");
+  const categoriesContainer = await createCategory(post, "thumbnail");
   const wrapper = createElement("div", "thumbnail-text-wrapper", undefined, [
     title,
     date,

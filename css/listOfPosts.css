@@ -50,11 +50,11 @@ h2 {
   place-self: end;
 }
 
-.category,
+.category-thumbnail,
 .thumbnail_date {
   font-size: 16px;
 }
-.category {
+.category-thumbnail {
   text-align: right;
   margin-top: 0;
   /* margin-bottom: 0; */
@@ -70,7 +70,7 @@ h2 {
   /* gap: 20px; */
 }
 
-.thumbnail-text-wrapper > .category {
+.thumbnail-text-wrapper > .category-thumbnail {
   display: block;
 }
 
