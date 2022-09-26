@@ -35,6 +35,8 @@ h2 {
 }
 .img-wrapper {
   max-width: 300px;
+  max-height: 200px;
+  overflow: hidden;
   margin: 10px;
 }
 

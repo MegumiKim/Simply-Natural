@@ -12,19 +12,14 @@ export async function createThumbnail(post) {
 
   const img = await createElement(
     "img",
-    "img-wrapper",
+    "img",
     undefined,
     undefined,
-    // post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail
-    //   .source_url
-    post._embedded["wp:featuredmedia"][0].source_url
+    post._embedded["wp:featuredmedia"][0].source_url,
+    post._embedded["wp:featuredmedia"][0].alt_text
   );
+  const imgWrapper = createElement("div", "img-wrapper", undefined, [img]);
 
-  // const category = await createElement(
-  //   "div",
-  //   "category",
-  //   post._embedded["wp:term"][0][0].name
-  // );
   const categoriesContainer = createElement(
     "div",
     "categories-thumbnail-container",
@@ -43,7 +38,7 @@ export async function createThumbnail(post) {
   ]);
   const linkUrl = `/html/post.html?id=${post.id}`;
   const element = createElement("a", "thumbnail", undefined);
-  element.append(img);
+  element.append(imgWrapper);
   element.append(wrapper);
   element.href = linkUrl;
 
