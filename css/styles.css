@@ -1,6 +1,5 @@
 @import "variables.css";
 @import "ui.css";
-/* @import "listOfPosts.css"; */
 
 /* global */
 
@@ -88,10 +87,7 @@ main {
   padding: 0;
   width: 100vw;
 }
-/* h1,
-h2 {
-  font-family: "Libre Caslon Display";
-} */
+
 .cta {
   font-size: 0.8em;
   text-transform: uppercase;
@@ -114,7 +110,7 @@ h2 {
 }
 
 ul {
-  margin-left: 25px; /* list-style: none; */
+  margin-left: 25px;
   margin-bottom: 30px;
 }
 li {
@@ -183,10 +179,6 @@ nav {
   /* padding-top: 40px; */
 }
 
-/* .nav-button{
-
-} */
-
 nav a {
   text-align: right;
   text-transform: uppercase;
@@ -224,9 +216,6 @@ nav a {
   position: relative;
   transition: transform 0.3s ease-in-out;
   width: 100%;
-
-  /* background-color: var(--color_background); */
-  /* background-color: #f6ebe2; */
 }
 
 .carousel_item {
@@ -237,10 +226,6 @@ nav a {
   flex-direction: column;
   transition: transform 0.3s ease-in-out;
 }
-
-/* .carousel:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-} */
 
 .carousel-img {
   /* flex: 2; */
@@ -263,10 +248,6 @@ a {
   color: var(--color_grey);
 }
 
-/* .img-wrapper {
-  position: relative;
-  flex: 1;
-} */
 .carousel-nav {
   /* display: none; */
   margin-top: 10px;
@@ -283,7 +264,7 @@ a {
 
 .arrow {
   /* display: none; */
-  top: 30%;
+  top: 20vh;
   color: var(--color_grey);
   position: absolute;
   cursor: pointer;
@@ -378,6 +359,7 @@ a {
 .featured-two-container {
   max-width: 1000px;
   margin: auto;
+  padding: 0 10%;
 }
 .category-thumbnail,
 .featured-one-container > .thumbnail {
@@ -480,6 +462,25 @@ a {
   /* font-style: italic; */
 }
 
-input:focus::placeholder {
-  color: transparent;
+/* form */
+
+#contact-form {
+  flex: 1;
+}
+
+.contact-img {
+  flex: 1;
+  margin: 0 auto 30px auto;
+  padding: 10%;
+  padding-top: 0;
+  /* max-height: 70vh;
+  overflow-y: hidden; */
+}
+
+.contact-img {
+  border-radius: 30px;
+}
+
+.contact-main h1 {
+  margin: 5% auto;
 }

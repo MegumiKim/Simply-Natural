@@ -26,7 +26,10 @@ export async function postComment(event, id) {
     });
 
     console.log(response);
-    userFeedback.innerHTML = userAlert("success", "Thank you for your message");
+    userFeedback.innerHTML = userAlert(
+      "success",
+      "Comment Posted Successfully"
+    );
     form.reset();
     renderComments(id, commentsContainer);
   } else {

@@ -5,7 +5,7 @@ export async function modalFunc(figures) {
   figures.forEach(function (figure) {
     figure.onclick = function () {
       console.log(figure);
-      const modalImage = figure.lastElementChild.src;
+      const modalImage = figure.firstChild.src;
       modalContainer.src = modalImage;
       toggleModal();
     };

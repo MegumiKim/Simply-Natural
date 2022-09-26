@@ -68,7 +68,13 @@
           action="https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback"
         >
           <label for="name">Name</label>
-          <input type="text" id="name" name="your-name" class="form__input" />
+          <input
+            type="text"
+            id="name"
+            name="your-name"
+            class="form__input"
+            required
+          />
           <p>*min 5 letters</p>
           <div class="form-error name-error"></div>
           <label for="subject">Subject</label>
@@ -77,6 +83,7 @@
             id="subject"
             name="your-subject"
             class="form__input"
+            required
           />
           <p>*min 15 letters</p>
           <div class="form-error subject-error"></div>
@@ -86,8 +93,9 @@
             id="email"
             name="your-email"
             class="form__input"
+            placeholder="example@email.com"
+            required
           />
-          <p>*example@email.com</p>
           <div class="form-error email-error"></div>
           <label for="texts">Message</label>
           <textarea
