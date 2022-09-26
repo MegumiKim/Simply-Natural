@@ -12,6 +12,8 @@ export async function createCarouselItem(post) {
       undefined,
       post._embedded["wp:featuredmedia"][0].source_url
     );
+    img.width = "640";
+    img.height = "360";
     const imgWrapper = createElement("div", "carousel-img-wrapper", undefined, [
       img,
     ]);

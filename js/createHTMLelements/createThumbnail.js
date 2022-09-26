@@ -18,6 +18,8 @@ export async function createThumbnail(post) {
     post._embedded["wp:featuredmedia"][0].source_url,
     post._embedded["wp:featuredmedia"][0].alt_text
   );
+  img.width = "640";
+  img.height = "360";
   const imgWrapper = createElement("div", "img-wrapper", undefined, [img]);
 
   const categoriesContainer = createElement(
