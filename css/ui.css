@@ -4,10 +4,18 @@
 }
 
 /* user alert */
-.form-error {
-  color: darkred;
+.input-feedback,
+.letter-count,
+.fail {
+  /* color: darkred; */
+  font-size: 15px;
 }
 
+.email-error,
+.fail {
+  color: darkred;
+  text-align: left;
+}
 .error,
 .success,
 .neutral {
@@ -19,6 +27,10 @@
   max-width: fit-content;
 }
 
+.letter-count-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .error {
   color: darkred;
   border: darkred 2px solid;

@@ -74,8 +74,8 @@
             class="form__input"
             required
           />
-          <p>*min 5 letters</p>
-          <div class="form-error name-error"></div>
+          <p></p>
+          <div class="input-feedback name-error"></div>
           <label for="subject">Subject</label>
           <input
             type="text"
@@ -84,8 +84,8 @@
             class="form__input"
             required
           />
-          <p>*min 15 letters</p>
-          <div class="form-error subject-error"></div>
+          <p></p>
+          <div class="input-feedback subject-error">*min 15 letters</div>
           <label for="email">Email</label>
           <input
             type="email"
@@ -95,7 +95,7 @@
             placeholder="example@email.com"
             required
           />
-          <div class="form-error email-error"></div>
+          <div class="input-feedback email-error"></div>
           <label for="texts">Message</label>
           <textarea
             id="message"
@@ -104,12 +104,20 @@
             required
             aria-label="message texts"
           ></textarea>
-          <p>*min 25 letters</p>
-          <div class="form-error message-error"></div>
+          <div class="letter-count-wrapper">
+            <div class="input-feedback message-error">*min 25 letters</div>
+            <div class="letter-count"></div>
+          </div>
           <input type="checkbox" id="sign-up" name="sign-up" class="checkbox" />
           <label for="sign-up">Sign-up for news letter</label>
           <div class="user-feedback"></div>
-          <input type="submit" value="Send" name="Submit" class="cta" />
+          <input
+            type="submit"
+            value="Send"
+            name="Submit"
+            class="cta"
+            id="submit"
+          />
         </form>
         <div class="contact-img">
           <img

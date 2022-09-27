@@ -14,7 +14,7 @@ body {
   width: 100%;
   color: var(--color_grey);
   font-size: 18px;
-  font-family: "Barlow", Cambria, Cochin, Georgia, serif;
+  font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
   margin: 0 auto;
   min-height: 100vh;
   display: grid;
@@ -32,7 +32,7 @@ h2,
 h3,
 .category-name,
 .carousel_title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Cormorant Garamond", Cambria, Cochin, Georgia, Times, serif;
   font-weight: 400;
   text-transform: capitalize;
 }
