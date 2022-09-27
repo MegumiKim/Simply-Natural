@@ -60,10 +60,15 @@ function validateEmail(email) {
 }
 
 userName.onblur = (event) => checkLength(event, 5, nameError);
-email.onblur = (event) => checkEmail(event);
-subject.onblur = (event) => checkLength(event, 15, subjectError);
-message.onblur = (event) => checkLength(event, 25, messageError);
-
+if (email) {
+  email.onblur = (event) => checkEmail(event);
+}
+if (subject) {
+  subject.onblur = (event) => checkLength(event, 15, subjectError);
+}
+if (message) {
+  message.onblur = (event) => checkLength(event, 25, messageError);
+}
 function checkLength(event, minLength, feedBackField) {
   if (event.target.value.trim().length >= minLength) {
     feedBackField.innerHTML = "";
@@ -100,10 +105,11 @@ export function validateContactForm() {
     return false;
   }
 }
+if (message) {
+  message.onkeyup = (event) => countLetters(event);
+  function countLetters(event) {
+    let count = event.target.value.trim().length;
 
-message.onkeyup = (event) => countLetters(event);
-function countLetters(event) {
-  let count = event.target.value.trim().length;
-
-  letterCount.innerHTML = `count: ${count}`;
+    letterCount.innerHTML = `count: ${count}`;
+  }
 }
