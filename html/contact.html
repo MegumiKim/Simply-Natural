@@ -60,73 +60,65 @@
     </header>
     <main class="contact-main">
       <h1>Contact</h1>
-      <div class="contact-div">
-        <form
-          id="contact-form"
-          method="POST"
-          action="https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback"
-        >
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="your-name"
-            class="form__input"
-            required
-          />
-          <p></p>
-          <div class="input-feedback name-error"></div>
-          <label for="subject">Subject</label>
-          <input
-            type="text"
-            id="subject"
-            name="your-subject"
-            class="form__input"
-            required
-          />
-          <p></p>
-          <div class="input-feedback subject-error">*min 15 letters</div>
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="your-email"
-            class="form__input"
-            placeholder="example@email.com"
-            required
-          />
-          <div class="input-feedback email-error"></div>
-          <label for="texts">Message</label>
-          <textarea
-            id="message"
-            name="your-message"
-            class="form__input"
-            required
-            aria-label="message texts"
-          ></textarea>
-          <div class="letter-count-wrapper">
-            <div class="input-feedback message-error">*min 25 letters</div>
-            <div class="letter-count"></div>
-          </div>
-          <input type="checkbox" id="sign-up" name="sign-up" class="checkbox" />
-          <label for="sign-up">Sign-up for news letter</label>
-          <div class="user-feedback"></div>
-          <input
-            type="submit"
-            value="Send"
-            name="Submit"
-            class="cta"
-            id="submit"
-          />
-        </form>
-        <div class="contact-img">
-          <img
-            class="contact-img"
-            src="../images/others/florian-klauer-mk7D-4UCfmg-unsplash(1).webp"
-            alt="a typewriter"
-          />
+      <!-- <div class="contact-div"> -->
+      <form
+        id="contact-form"
+        method="POST"
+        action="https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback"
+      >
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="your-name"
+          class="form__input"
+          required
+        />
+        <p></p>
+        <div class="input-feedback name-error"></div>
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="your-subject"
+          class="form__input"
+          required
+        />
+        <p></p>
+        <div class="input-feedback subject-error">*min 15 letters</div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="your-email"
+          class="form__input"
+          placeholder="example@email.com"
+          required
+        />
+        <div class="input-feedback email-error"></div>
+        <label for="texts">Message</label>
+        <textarea
+          id="message"
+          name="your-message"
+          class="form__input"
+          required
+          aria-label="message texts"
+        ></textarea>
+        <div class="letter-count-wrapper">
+          <div class="input-feedback message-error">*min 25 letters</div>
+          <div class="letter-count"></div>
         </div>
-      </div>
+        <input type="checkbox" id="sign-up" name="sign-up" class="checkbox" />
+        <label for="sign-up">Sign-up for news letter</label>
+        <div class="user-feedback"></div>
+        <input
+          type="submit"
+          value="Send"
+          name="Submit"
+          class="cta"
+          id="submit"
+        />
+      </form>
     </main>
     <footer>
       <div class="copyright">Simply Natural &copy</div>

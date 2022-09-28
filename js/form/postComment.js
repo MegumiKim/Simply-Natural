@@ -2,19 +2,19 @@ import { renderComments } from "../createHTMLelements/renderComments.js";
 import { userAlert } from "../userAlert.js";
 import { validateCommentForm } from "./validateForm.js";
 
+const userFeedback = document.querySelector(".user-feedback");
+const name = document.querySelector("#name");
+const message = document.querySelector("#message");
+const commentsContainer = document.querySelector(".previous-comments");
+
 export async function postComment(event, id) {
   event.preventDefault();
-  const userFeedback = document.querySelector(".user-feedback");
   const form = event.target;
-  const name = document.querySelector("#name");
-  const comment = document.querySelector("#comment");
-  const commentsContainer = document.querySelector(".previous-comments");
-
   if (validateCommentForm()) {
     const data = JSON.stringify({
       post: id,
       author_name: name.value,
-      content: comment.value,
+      content: message.value,
     });
 
     const response = await fetch(form.action, {
@@ -33,9 +33,6 @@ export async function postComment(event, id) {
     form.reset();
     renderComments(id, commentsContainer);
   } else {
-    userFeedback.innerHTML = userAlert(
-      "error",
-      "Failed to send data to database"
-    );
+    userFeedback.innerHTML = userAlert("error", "Please fill required fields");
   }
 }

@@ -76,10 +76,13 @@
         </div>
         <div>
           <label for="comment">Comment</label>
-          <textarea name="comment" class='form__input' id="comment" ></textarea>
-          <div class="form-error comment-error"></div>
-        </div>
-        <input class='cta' name='submit' type="submit" value="Post" />
+          <textarea name="comment" class='form__input' id="message" ></textarea>
+          <div class="letter-count-wrapper">
+            <div class="input-feedback message-error">*min 25 letters</div>
+            <div class="letter-count"></div>
+          </div>
+        <input class='cta' id='submit' name='submit' type="submit" value="Post" />
+
       </form>
       <div class="user-feedback"></div>
 

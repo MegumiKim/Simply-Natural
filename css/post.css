@@ -100,6 +100,7 @@ p {
   gap: 20px;
   max-width: 600px;
   border-radius: 3px;
+  overflow: scroll;
 }
 
 .user-comment p {

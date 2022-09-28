@@ -1,6 +1,7 @@
 // import { sendForm } from "./form/sendForm.js";
 import { validateContactForm } from "./form/validateForm.js";
 import { userAlert } from "./userAlert.js";
+import { contactInputOnblur } from "./form/validateForm.js";
 
 const form = document.querySelector("#contact-form");
 const userFeedback = document.querySelector(".user-feedback");
@@ -15,8 +16,14 @@ export async function sendForm(event) {
       method: form.method,
       body: new FormData(form),
     });
-    userFeedback.innerHTML = userAlert("success", "Thank you for your message");
+    userFeedback.innerHTML = userAlert(
+      "success",
+      "Thank you for your message. Redirecting to home page in 5 seconds."
+    );
     form.reset();
+    const timer = setTimeout(function () {
+      window.location = "/index.html";
+    }, 5000);
   } else {
     userFeedback.innerHTML = userAlert(
       "error",
@@ -24,3 +31,5 @@ export async function sendForm(event) {
     );
   }
 }
+
+contactInputOnblur();
