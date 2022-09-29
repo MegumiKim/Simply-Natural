@@ -1,8 +1,8 @@
-import { postComment } from "./form/postComment.js";
-import { renderRelatedPosts } from "./form/renderRelated.post.js";
 import { renderPost } from "./createHTMLelements/renderPost.js";
 import { renderComments } from "./createHTMLelements/renderComments.js";
-import { commentsInputOnBlur } from "./form/validateForm.js";
+import { renderRelatedPosts } from "./createHTMLelements/renderRelatedPost.js";
+import { postComment } from "./components/form/postComment.js";
+import { commentsInputOnBlur } from "./components/form/validateForm.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

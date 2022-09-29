@@ -115,7 +115,17 @@ input {
 .search-button {
   font-size: large;
 }
+#search-input {
+  font-size: 1.2em;
+  padding-left: 5%;
+}
 
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 40px auto;
+}
 button {
   border: none;
   background-color: white;

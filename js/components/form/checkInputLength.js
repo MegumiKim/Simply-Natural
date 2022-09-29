@@ -7,12 +7,3 @@ export function checkLength(event, minLength, feedBackField) {
     return false;
   }
 }
-
-export function checkInputLength(value, minLength) {
-  const inputValue = value;
-  if (inputValue.trim().length >= minLength) {
-    return true;
-  } else {
-    return false;
-  }
-}

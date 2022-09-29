@@ -1,6 +1,6 @@
 import { createThumbnail } from "./createThumbnail.js";
-import { userAlert } from "../userAlert.js";
-import { fetchAPI } from "../fetchAPI.js";
+import { userAlert } from "../utils/userAlert.js";
+import { fetchAPI } from "../utils/fetchAPI.js";
 
 export async function renderThumbnails(url, container) {
   container.innerHTML = "";

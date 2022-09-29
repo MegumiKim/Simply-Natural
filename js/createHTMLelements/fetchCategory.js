@@ -1,4 +1,4 @@
-import { userAlert } from "../userAlert.js";
+import { userAlert } from "../utils/userAlert.js";
 // import { createElement } from "./createElement.js";
 
 export async function fetchCategory(post) {

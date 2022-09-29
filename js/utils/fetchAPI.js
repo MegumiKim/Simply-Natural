@@ -1,5 +1,3 @@
-import { userAlert } from "./userAlert.js";
-
 export async function fetchAPI(url) {
   try {
     const response = await fetch(url);

@@ -11,15 +11,3 @@ export function checkEmail(event) {
     return false;
   }
 }
-
-export function validateEmail(email) {
-  const regEx = /\S+@\S+\.\S+/;
-  const patternMach = regEx.test(email);
-  if (patternMach) {
-    emailError.innerHTML = "";
-    return true;
-  } else {
-    emailError.innerHTML = "invalid email address";
-    return false;
-  }
-}

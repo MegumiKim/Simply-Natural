@@ -1,7 +1,8 @@
-// import { sendForm } from "./form/sendForm.js";
-import { validateContactForm } from "./form/validateForm.js";
-import { userAlert } from "./userAlert.js";
-import { contactInputOnblur } from "./form/validateForm.js";
+import {
+  validateContactForm,
+  contactInputOnblur,
+} from "./components/form/validateForm.js";
+import { userAlert } from "./utils/userAlert.js";
 
 const form = document.querySelector("#contact-form");
 const userFeedback = document.querySelector(".user-feedback");

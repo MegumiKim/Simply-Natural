@@ -1,9 +1,8 @@
-import { renderThumbnails } from "../createHTMLelements/renderThumbnail.js";
-import { fetchAPI } from "../fetchAPI.js";
+import { renderThumbnails } from "./renderThumbnail.js";
+import { fetchAPI } from "../utils/fetchAPI.js";
 
 export async function renderRelatedPosts(url, relatedContainer, excludeID) {
   const post = await fetchAPI(url);
-
   const categoryID = post._embedded["wp:term"][0][0].id;
   const argument =
     "&_fields=id,date,title,_links,_embedded&_embed=wp:featuredmedia,wp:term";
@@ -13,6 +12,5 @@ export async function renderRelatedPosts(url, relatedContainer, excludeID) {
     "&categories=" +
     categoryID +
     `&exclude=${excludeID}`;
-  console.log(relatedPostUrl);
   renderThumbnails(relatedPostUrl, relatedContainer);
 }

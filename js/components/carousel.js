@@ -1,12 +1,15 @@
-import { createCarouselItem } from "./createHTMLelements/createCarouselItem.js";
-import { fetchAPI } from "./fetchAPI.js";
+import { createCarouselItem } from "../createHTMLelements/createCarouselItem.js";
+import { fetchAPI } from "../utils/fetchAPI.js";
 
 const url =
   "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed&per_page=5";
 const fetchedPosts = await fetchAPI(url);
 const container = document.querySelector(".caro_container");
-
+const forward = document.querySelector(".forward");
+const backButton = document.querySelector(".back");
+const dots = document.querySelectorAll(".dot");
 let index = 0;
+
 export async function carousel() {
   try {
     container.innerHTML = "";
@@ -18,10 +21,6 @@ export async function carousel() {
   }
 }
 
-const forward = document.querySelector(".forward");
-const backButton = document.querySelector(".back");
-const dots = document.querySelectorAll(".dot");
-const two = document.querySelector(".two");
 forward.onclick = showNextSlide;
 backButton.onclick = showPreviousSlide;
 
@@ -34,7 +33,7 @@ dots.forEach((dot, i) => {
   };
 });
 
-export function showNextSlide() {
+function showNextSlide() {
   const dots = document.querySelectorAll(".dot");
   dots[index].classList.remove("carousel-dot_selected");
   index = (index + 1) % 5;
@@ -42,7 +41,7 @@ export function showNextSlide() {
   carousel();
 }
 
-export function showPreviousSlide() {
+function showPreviousSlide() {
   const dots = document.querySelectorAll(".dot");
   if (index > 0) {
     dots[index].classList.remove("carousel-dot_selected");

@@ -1,5 +1,5 @@
-import { fetchAPI } from "../fetchAPI.js";
-import { userAlert } from "../userAlert.js";
+import { fetchAPI } from "../utils/fetchAPI.js";
+import { userAlert } from "../utils/userAlert.js";
 import { createElement } from "./createElement.js";
 import { formatDate } from "./formatDate.js";
 

@@ -33,6 +33,11 @@
     width: 100%;
     margin: 0 auto;
   }
+  .results-container {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
 
   .main-full {
     max-width: none;
@@ -150,6 +155,9 @@
 
   .main-search {
     max-width: 100%;
+  }
+  .results-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .carousel-img-wrapper {
     flex: 2;

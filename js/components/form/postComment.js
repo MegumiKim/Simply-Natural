@@ -1,5 +1,5 @@
-import { renderComments } from "../createHTMLelements/renderComments.js";
-import { userAlert } from "../userAlert.js";
+import { renderComments } from "../../createHTMLelements/renderComments.js";
+import { userAlert } from "../../utils/userAlert.js";
 import { validateCommentForm } from "./validateForm.js";
 
 const userFeedback = document.querySelector(".user-feedback");
@@ -24,7 +24,6 @@ export async function postComment(event, id) {
       },
       body: data,
     });
-
     console.log(response);
     userFeedback.innerHTML = userAlert(
       "success",

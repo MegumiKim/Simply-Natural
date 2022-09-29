@@ -1,10 +1,10 @@
 import { renderThumbnails } from "./createHTMLelements/renderThumbnail.js";
 import { renderTitle } from "./createHTMLelements/renderTitle.js";
-const container = document.querySelector(".list-of-post_container");
 
-// const url = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed";
+const container = document.querySelector(".list-of-post_container");
+const baseUrl = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts";
 const url =
-  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_fields=id,date,title,_links,&_embed=wp:featuredmedia,wp:term";
+  baseUrl + "?_fields=id,date,title,_links,&_embed=wp:featuredmedia,wp:term";
 const categorySelector = document.querySelector("#category-selector");
 const h2 = document.querySelector("h2");
 
@@ -28,7 +28,6 @@ export function sortByCategory() {
 
   if (categoryID) {
     const newUrl = url + "&categories=" + categoryID;
-    console.log(newUrl);
     return renderThumbnails(newUrl, container);
   } else {
     return renderThumbnails(url, container);

@@ -1,7 +1,7 @@
 import { createElement } from "./createElement.js";
-import { modalFunc } from "../modal.js";
-import { userAlert } from "../userAlert.js";
-import { fetchAPI } from "../fetchAPI.js";
+import { modalFunc } from "../components/modal.js";
+import { userAlert } from "../utils/userAlert.js";
+import { fetchAPI } from "../utils/fetchAPI.js";
 
 export async function renderPost(url, container) {
   container.innerHTML = "";
