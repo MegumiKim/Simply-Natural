@@ -79,7 +79,7 @@ p {
 }
 
 main {
-  padding: 0 8%;
+  padding: 0 8% 8% 8%;
   margin: 0 auto;
   max-width: 100vw;
   width: 100vh;
@@ -122,7 +122,7 @@ li {
 .logo {
   font-family: "Oooh Baby", cursive, serif;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   /* color: black; */
 }
@@ -131,7 +131,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px;
+  margin: 1.5em 1em;
 }
 
 footer {
@@ -360,7 +360,7 @@ a {
 .featured-two-container {
   max-width: 1000px;
   margin: auto;
-  padding: 0 10%;
+  /* padding: 0 2em; */
 }
 .featured-category,
 .featured-one-container > .thumbnail {
