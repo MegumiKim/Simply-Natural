@@ -5,7 +5,13 @@ import { formatDate } from "./formatDate.js";
 
 export async function createCarouselItem(post) {
   try {
-    const title = createElement("a", "carousel_title", post.title.rendered);
+    const title = createElement("h1", "carousel_title", post.title.rendered);
+    const title_wrapper = createElement(
+      "a",
+      "carousel-title-wrapper",
+      undefined,
+      [title]
+    );
     const date = createElement("p", "carousel_date", formatDate(post));
 
     const imgWrapper = await createImg(post, "carousel");
@@ -15,9 +21,9 @@ export async function createCarouselItem(post) {
       "div",
       "carousel-text-wrapper",
       undefined,
-      [date, title, categoriesContainer]
+      [date, title_wrapper, categoriesContainer]
     );
-    title.href = linkUrl;
+    title_wrapper.href = linkUrl;
 
     const element = await createElement("div", "carousel_item", undefined, [
       imgWrapper,

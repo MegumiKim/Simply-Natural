@@ -119,6 +119,7 @@
     padding: 5%;
   }
 
+  .welcome_title,
   h2 {
     font-size: 2.5em;
     margin: 0 auto 5% auto;
@@ -176,7 +177,7 @@
     overflow-y: clip;
   }
   .carousel_title {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: auto;
   }
 

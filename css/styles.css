@@ -37,9 +37,11 @@ h3,
   text-transform: capitalize;
 }
 
-h1,
-.carousel_title {
+h1 {
   font-size: 3em;
+}
+.carousel_title {
+  font-size: 1.8em;
   text-align: left;
 }
 
