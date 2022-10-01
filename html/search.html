@@ -11,15 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow&family=Cormorant+Garamond:wght@300;400&family=Oooh+Baby&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Cormorant+Garamond&family=Oooh+Baby&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/listOfPosts.css" />
     <link rel="stylesheet" href="../css/media.css" />
     <title>Simply Natural | Search</title>
-
     <script
       src="https://kit.fontawesome.com/175ecb4e25.js"
       crossorigin="anonymous"
@@ -30,7 +28,11 @@
     <header>
       <a class="logo" href="../index.html">Simply Natural</a>
       <div class="nav-search-wrap">
-        <a href="search.html" class="search_icon fas fa-search"></a>
+        <a
+          href="search.html"
+          class="search_icon fas fa-search"
+          aria-hidden="false"
+        ></a>
         <div class="nav-wrap">
           <input type="checkbox" id="hamburger-menu" />
           <label for="hamburger-menu" id="hamburger-icon"
@@ -49,7 +51,13 @@
       <section class="search-section">
         <h1>Search</h1>
         <div class="search">
-          <button><i class="search-button fas fa-search"></i></button>
+          <button>
+            <i
+              class="search-button fas fa-search"
+              aria-hidden="false"
+              aria-label="search item"
+            ></i>
+          </button>
           <input
             type="text"
             id="search-input"
