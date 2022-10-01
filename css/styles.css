@@ -139,7 +139,7 @@ header {
 
 footer {
   padding: 60px;
-  background-color: var(--color_black);
+  background-color: var(--color_grey);
   color: white;
   justify-content: center;
   text-align: center;
@@ -165,7 +165,7 @@ nav {
 
 .search_icon {
   text-decoration: none;
-  color: var(--color_black);
+  color: var(--color_grey);
 }
 
 .nav-search-wrap {
@@ -178,8 +178,8 @@ nav {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 90px;
-  right: 25px;
+  top: 60px;
+  right: 10px;
   /* padding-top: 40px; */
 }
 

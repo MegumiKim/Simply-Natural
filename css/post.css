@@ -5,7 +5,7 @@ h1,
 .wp-block-post-terms {
   text-align: center;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 .wp-block-post-date,
 .wp-block-post-terms {
@@ -95,12 +95,11 @@ p {
   border: 2px solid var(--color_light-green);
   text-align: left;
   margin: 10px auto 30px auto;
-  padding: 20px 40px;
+  padding: 20px;
   display: flex;
   gap: 20px;
   max-width: 600px;
   border-radius: 3px;
-  overflow: scroll;
 }
 
 .user-comment p {
@@ -120,10 +119,6 @@ p {
   margin-bottom: 20%;
 }
 
-.previous-comments p {
-  text-align: center;
-}
-
 #comment-form {
   padding: 0;
 }
@@ -137,6 +132,6 @@ p {
   text-align: left;
 }
 
-time {
-  font-size: 0.7em;
+.comment-meta time {
+  font-size: 0.6em;
 }

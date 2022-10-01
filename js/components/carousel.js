@@ -1,9 +1,11 @@
 import { createCarouselItem } from "../createHTMLelements/createCarouselItem.js";
 import { fetchAPI } from "../utils/fetchAPI.js";
 
-const url =
-  "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts?_embed&per_page=5";
-const fetchedPosts = await fetchAPI(url);
+const baseURL = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts";
+const fieldsParam =
+  "?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term";
+const carouselUrl = baseURL + fieldsParam + "&per_page=5";
+const fetchedPosts = await fetchAPI(carouselUrl);
 const container = document.querySelector(".caro_container");
 const forward = document.querySelector(".forward");
 const backButton = document.querySelector(".back");

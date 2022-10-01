@@ -20,14 +20,14 @@ searchInput.onkeypress = async function () {
 
 searchButton.onclick = async function () {
   const userInput = searchInput.value.toLowerCase().trim();
-  const newUrl = url + `?search=${userInput}`;
+  const newUrl = url + `&search=${userInput}`;
   container.innerHTML = "";
   renderThumbnails(newUrl, container);
 };
 
 searchButton.addEventListener("touched", async function () {
   const userInput = searchInput.value.toLowerCase().trim();
-  const newUrl = url + `?search=${userInput}`;
+  const newUrl = url + `&search=${userInput}`;
   container.innerHTML = "";
   renderThumbnails(newUrl, container);
 });

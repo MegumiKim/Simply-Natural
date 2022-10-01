@@ -4,12 +4,11 @@ import { getFeaturedItem } from "./components/getFeaturedItem.js";
 
 const featuredOne = document.querySelector(".featured-one-container");
 const baseURL = "https://kimuramegumi.site/SimplyNatural/wp-json/wp/v2/posts";
-const featuredParam =
-  "?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term&categories=3";
-const featuredCategoryUrl = baseURL + featuredParam;
-const topStoryUrl =
-  baseURL +
-  "/86?_fields=id,date,title,_links,_embedded&_embed=wp:featuredmedia,wp:term";
+const fieldsParam =
+  "?_fields=id,date,title,content,_links,_embedded&_embed=wp:featuredmedia,wp:term";
+const categoryParam = "&categories=3";
+const featuredCategoryUrl = baseURL + fieldsParam + categoryParam;
+const topStoryUrl = baseURL + "/86" + fieldsParam;
 
 carousel();
 renderThumbnails(featuredCategoryUrl, featuredOne);

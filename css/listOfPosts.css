@@ -110,16 +110,16 @@ select:hover {
 input {
   min-height: 40px;
   border: none;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   width: 100%;
 }
 
 .search-button {
   font-size: large;
+  margin: 0 1em;
 }
 #search-input {
   font-size: 1.2em;
-  padding-left: 5%;
 }
 
 .results-container {
