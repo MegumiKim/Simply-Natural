@@ -2,7 +2,7 @@
 Project Exam 1. An assignment at the end of the first year at Noroff.
 
 ## Description
-A fictious blog about eco-friendly lifestyle where a user can search/browse and write a comment on a blog post.
+A fictitious blog about eco-friendly lifestyle where a user can search/browse and write a comment on a blog post.
 WordPress REST API provides content. 
 
 
@@ -20,8 +20,9 @@ git clone git@github.com:Noroff-FEU-Assignments/project-exam-1-MegumiKim.git
 ```
 
 ## Contributing
-Please make sure to open a pull request so that code can be reviewed.
+Any feedback is welcome for future improvement.
 
 ## Contact
 [My LinkedIn page](www.linkedin.com/in/kimuramegumi/)
 
+![simplynatural_screen](https://user-images.githubusercontent.com/64102873/194509594-4b1cd5b9-62d8-4f46-a333-dd6375075d78.JPG)
