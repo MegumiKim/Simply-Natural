@@ -1,9 +1,8 @@
 import { fetchAPI } from "../utils/fetchAPI.js";
 
-export async function renderCategoryTitle(baseUrl, id) {
+export async function renderCategoryTitle(url, id) {
   try {
-    const categoryUrl = baseUrl + `categories/${id}`;
-    const category = await fetchAPI(categoryUrl);
+    const category = await fetchAPI(url);
     const title = await category.name;
 
     return title;

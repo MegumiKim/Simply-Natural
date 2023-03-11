@@ -8,7 +8,9 @@ export async function sortByCategory(baseUrl, url, container) {
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const categoryID = params.get("category");
+  console.log(categoryID);
 
+  // console.table();
   if (categoryID) {
     const newUrl = url + "&categories=" + categoryID;
     h2.innerHTML = await renderCategoryTitle(baseUrl, categoryID);

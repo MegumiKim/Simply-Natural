@@ -13,10 +13,13 @@ const viewMore = document.querySelector(".view-more");
 
 categorySelector.onchange = async function (event) {
   const id = event.target.value;
+
   if (id) {
     const newUrl = url + "&categories=" + id;
     const categoryUrl = baseUrl + `categories/${id}`;
-    h2.innerHTML = await renderCategoryTitle(categoryUrl);
+
+    const selectedCategory = await renderCategoryTitle(categoryUrl);
+    h2.innerHTML = selectedCategory;
     renderThumbnails(newUrl, container);
   } else {
     h2.innerHTML = "All Categories";
